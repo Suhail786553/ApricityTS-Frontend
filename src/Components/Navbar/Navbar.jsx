@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <ul className="flex flex-col items-center space-y-6 p-6 bg-white shadow-lg">
             <li>
-              <a href="/home" className="text-gray-800 hover:text-gray-500">Home</a>
+              <a href="/" className="text-gray-800 hover:text-gray-500">Home</a>
             </li>
             <li>
               <a href="/products" className="text-gray-800 hover:text-gray-500">Products</a>

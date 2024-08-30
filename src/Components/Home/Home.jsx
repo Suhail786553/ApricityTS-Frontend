@@ -140,6 +140,38 @@ const Hero = () => {
       {/* Happy Customer Text */}
       <p className="mt-4 font-noto text-[20px]">Happy Customer</p>
     </div>
+    <div className="flex flex-col md:flex-row justify-center items-center py-16 px-4 bg-white">
+      {/* Left Content */}
+      <div className="md:w-1/3 px-12 flex justify-center items-center mb-12 md:mb-0">
+        <div className="text-left">
+          <h3 className="text-[#1D1E20] text-[50px] font-serif mb-4 font-medium">AI Solutions</h3>
+          <p className="text-[#56585E] text-[16px] mb-8 max-w-3xl">
+            Accelerating business processes with smart AI-driven solutions in UAE, Dubai, and Gulf regions.
+          </p>
+          <div className="space-y-4">
+            <div>
+              <strong className="block text-[#1D1E20] text-[20px] font-sans mb-1">Success</strong>
+              <p className="text-[#56585E] text-[16px]">123 Main Street</p>
+            </div>
+            <div>
+              <strong className="block text-[#1D1E20] text-[20px] font-sans mb-1">Hours</strong>
+              <p className="text-[#56585E] text-[16px]">Mon-Fri 9am-5pm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Map */}
+      <div className="md:w-2/3 flex justify-center items-center">
+        <iframe
+          className="w-8/12 h-96 rounded-lg shadow-lg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509839!2d144.95373531545092!3d-37.81627974202147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f4cbdbab%3A0x5045675218ce6e0!2s123%20Main%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1619454985881!5m2!1sen!2sus"
+          allowFullScreen=""
+          loading="lazy"
+          title="Map"
+        ></iframe>
+      </div>
+    </div>
   </>
   );
 };
