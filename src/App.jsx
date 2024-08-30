@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Product from './Components/Product/Product';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
   return (
@@ -16,7 +17,9 @@ const App = () => {
         {/* <Route path="contact" element={<Contact />} />
         <Route path="*" element={<NoPage />} /> */}
       </Routes>
+      <Footer/>
     </BrowserRouter>
+
   );
 }
 

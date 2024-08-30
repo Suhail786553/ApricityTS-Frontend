@@ -62,6 +62,45 @@ const Product = () => {
       </div>
     </div>
     </div>
+    <div className="bg-white py-16 flex justify-center items-center">
+  <div className="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto">
+    {/* Left Div (Image) */}
+    <div className="w-full md:w-2/3 md:h-full ms:h-full">
+      <img
+        src="https://images.unsplash.com/photo-1710993011875-38d2f3ecf0be?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwyOHx8YWklMjBzb2x1dGlvbnN8ZW58MHx8fHwxNzIzNDY0MDYyfDA&ixlib=rb-4.0.3&auto=format&fit=crop&w=861&h=653" // Replace with your image URL
+        alt="Testimonial"
+        className="w-full h-full object-cover" style={{height:"70vh"}}
+      />
+    </div>
+
+    {/* Right Div (Content) */}
+    <div className="w-full md:w-2/3 bg-[#904af2] text-white p-12 flex flex-col items-center justify-center" style={{height:"70vh"}}>
+      <div className="text-center">
+        {/* 5 Stars */}
+        <div className="mb-4 text-2xl">
+          {'★ ★ ★ ★ ★'}
+        </div>
+
+        {/* Testimonial Text */}
+        <p className="text-[18px] mb-8">
+          Our Arabic OCR engine has revolutionized our workflow efficiency. Highly recommend it!
+        </p>
+
+        {/* Circular Image */}
+        <div className="mt-8 flex justify-center">
+          <img
+            className="w-28 h-28 rounded-full border-4 border-white"
+            src="https://images.unsplash.com/photo-1625314897518-bb4fe6e95229?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw0fHxhaSUyMHNvbHV0aW9uc3xlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=48&h=48"
+            alt="Happy Customer"
+          />
+        </div>
+
+        {/* Happy Customer Text */}
+        <p className="mt-4 font-noto text-[22px] text-black">Anas Al Mashari</p>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 }

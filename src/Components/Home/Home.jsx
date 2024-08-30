@@ -119,7 +119,7 @@ const Hero = () => {
       {/* Star Rating */}
       <div className="flex justify-center mb-4">
         {[...Array(5)].map((_, i) => (
-          <FaStar key={i} className="text-white text-base" />
+          <FaStar key={i} className="text-white text-sm" />
         ))}
       </div>
 
