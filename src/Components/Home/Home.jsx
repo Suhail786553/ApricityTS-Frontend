@@ -29,35 +29,37 @@ const Hero = () => {
       </h4>
     </div>
     <div className="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-    {/* Left Content */}
-    <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
-      <p className="text-black-700 text-base md:text-base leading-relaxed mb-8">
-        We specialize in providing computer vision and generative AI solutions that can easily integrate with your existing services, improving the overall intelligence of your business operations. Our solutions are designed to be plug-and-play, making it simple for you to enhance the capabilities of your services without unnecessary complications. With our expertise in AI technology, we can help streamline your processes, improve efficiency, and provide valuable insights to drive your business forward. By leveraging our innovative solutions, you can stay ahead of the competition and meet the evolving needs of your customers. Let us help you unlock the full potential of your business with our cutting-edge AI solutions.
-      </p>
-      <p className="text-gray-600 text-lg md:text-base font-semibold mb-8">
-        Empowering UAE Businesses with AI Solutions for Efficiency and Growth
-      </p>
-      <div className="flex justify-center md:justify-start items-center space-x-12">
-        <div className="text-center">
-          <p className="text-5xl font-bold" style={{color:"rgb(145, 76, 242)"}}>50+</p>
-          <p className="text-gray-700 text-sm md:text-base mt-2">Trusted Partner</p>
-        </div>
-        <div className="text-center">
-          <p className="text-5xl font-bold"style={{color:"rgb(145, 76, 242)"}}>15</p>
-          <p className="text-gray-700 text-sm md:text-base mt-2">Leading AI Innovators</p>
-        </div>
+  {/* Left Content */}
+  <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
+    <p className="text-black-700 text-base md:text-base leading-relaxed mb-8">
+      We specialize in providing computer vision and generative AI solutions that can easily integrate with your existing services, improving the overall intelligence of your business operations. Our solutions are designed to be plug-and-play, making it simple for you to enhance the capabilities of your services without unnecessary complications. With our expertise in AI technology, we can help streamline your processes, improve efficiency, and provide valuable insights to drive your business forward. By leveraging our innovative solutions, you can stay ahead of the competition and meet the evolving needs of your customers. Let us help you unlock the full potential of your business with our cutting-edge AI solutions.
+    </p>
+    <p className="text-gray-600 text-lg md:text-base font-semibold mb-8">
+      Empowering UAE Businesses with AI Solutions for Efficiency and Growth
+    </p>
+    <div className="flex justify-center md:justify-start items-center space-x-12">
+      <div className="text-center">
+        <p className="text-5xl font-bold" style={{color:"rgb(145, 76, 242)"}}>50+</p>
+        <p className="text-gray-700 text-sm md:text-base mt-2">Trusted Partner</p>
+      </div>
+      <div className="text-center">
+        <p className="text-5xl font-bold" style={{color:"rgb(145, 76, 242)"}}>15</p>
+        <p className="text-gray-700 text-sm md:text-base mt-2">Leading AI Innovators</p>
       </div>
     </div>
-
-    {/* Right Image */}
-    <div className="md:w-2/3 flex justify-center items-center">
-      <img
-        className="max-w-full h-65 rounded-xl shadow-md"
-        src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=656&h=560"
-        alt="AI Solutions" style={{width:"35vw"}}
-      />
-    </div>
   </div>
+
+  {/* Right Image */}
+  <div className="md:w-2/5 flex justify-center items-center">
+    <img
+      className="w-full md:w-full max-w-full h-auto rounded-xl shadow-md"
+      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=656&h=560"
+      alt="AI Solutions"
+      // style={{ width: "100vw", maxWidth: "35vw" }} // Increase width for mobile screens
+    />
+  </div>
+</div>
+
   <div className="bg-black text-white py-16">
       {/* Section Heading */}
       <div className="text-center mb-12">

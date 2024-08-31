@@ -1,11 +1,11 @@
-import React from 'react';
-import Navbar from './Components/Navbar/Navbar';
+import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from './Components/Home/Home';
-import Product from './Components/Product/Product';
-import Footer from './Components/Footer/Footer';
-import About from './Components/About/About';
+import Home from "./Components/Home/Home";
+import Product from "./Components/Product/Product";
+import Footer from "./Components/Footer/Footer";
+import About from "./Components/About/About";
 
 const App = () => {
   return (
@@ -17,10 +17,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
         {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
-
   );
-}
+};
 
 export default App;
