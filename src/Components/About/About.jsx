@@ -139,7 +139,7 @@ const Section = () => {
               <button
                 type="submit"
                 className="w-60 p-3 bg-[#904af2] text-white rounded-md"
-                style={{ borderRadius: "20px" }}
+                style={{ borderRadius: "40px" }}
               >
                 Submit Form Data
               </button>

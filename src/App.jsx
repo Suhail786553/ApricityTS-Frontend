@@ -6,7 +6,7 @@ import Home from "./Components/Home/Home";
 import Product from "./Components/Product/Product";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
-
+import Usecases from './Components/Usecases/Usecases';
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Product />} />
         <Route path="/about" element={<About />} />
+        <Route path="/usecases" element={<Usecases />} />
         {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
       <Footer />

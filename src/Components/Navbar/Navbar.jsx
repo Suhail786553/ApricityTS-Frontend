@@ -127,36 +127,19 @@ const Navbar = () => {
               </a>
             </li>
             <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.facebook.com/" className="text-gray-800 hover:text-gray-500" target="_blank"
+                rel="noopener noreferrer">
                 <FaFacebook />
               </a>
-              <a
-                href="https://www.instagram.com/"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.instagram.com/" className="text-gray-800 hover:text-gray-500" target="_blank"
+                rel="noopener noreferrer">
                 <FaInstagram />
               </a>
-              <a
-                href="https://www.linkedin.com/feed/"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.linkedin.com/feed/" className="text-gray-800 hover:text-gray-500" target="_blank"
+                rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a
-                href="https://twitter.com"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://twitter.com" className="text-gray-800 hover:text-gray-500">
                 <FaXTwitter />
               </a>
             </div>

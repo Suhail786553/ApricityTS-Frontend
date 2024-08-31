@@ -68,7 +68,7 @@ const Footer = () => {
               placeholder="Enter Your Email Address"
               className="p-3 rounded-md text-black"
             />
-            <button className="bg-[#904af2] text-white p-3 rounded-md">
+            <button className="bg-[#904af2] w-60 text-white p-3 rounded-md" style={{borderRadius:"40px"}}>
               Submit Your Email Address
             </button>
           </div>
