@@ -285,11 +285,7 @@ const Hero = () => {
         <div className="md:w-2/3 flex justify-center items-center">
           <iframe
             className="w-8/12 h-96 rounded-lg shadow-lg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509839!2d144.95373531545092!3d-37.81627974202147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f4cbdbab%3A0x5045675218ce6e0!2s123%20Main%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1619454985881!5m2!1sen!2sus"
-            allowFullScreen=""
-            loading="lazy"
-            title="Map"
-          ></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28480.86062327462!2d80.85467682443611!3d26.836530458296963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfe5d323b520b%3A0x2f011730d8522686!2sRajajipuram%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1725468455650!5m2!1sen!2sin"></iframe>
         </div>
       </div>
     </>
