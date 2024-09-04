@@ -101,16 +101,17 @@ const Section = () => {
           </div>
 
           {/* Right Div */}
+
           <div className="w-full md:w-1/2">
             <div className="space-y-6">
               <div>
                 <p className="mb-2">
-                  Target market for AI solutions{" "}
-                  <span className="text-red-600">*</span>
+                  Company Name{" "}
+                  {/* <span className="text-red-600">*</span> */}
                 </p>
                 <input
                   type="text"
-                  placeholder="Enter Your Target market details"
+                  placeholder="Enter Your Company Name"
                   className="w-full p-3 border border-gray-300 rounded-md text-black"
                 />
               </div>
@@ -127,13 +128,13 @@ const Section = () => {
               </div>
               <div>
                 <p className="mb-2">
-                  Key products offered by company{" "}
+                 Company Email-Address{" "}
                   <span className="text-red-600">*</span>
                 </p>
                 <input
-                  type="text"
-                  placeholder="Enter Your Business Overview Here"
-                  className="w-full p-3 border border-gray-300 rounded-md text-black"
+                  type="email"
+                  placeholder="Enter Email-Address"
+                  className="w-full p-4 border border-gray-300 rounded-md text-black"
                 />
               </div>
               <button

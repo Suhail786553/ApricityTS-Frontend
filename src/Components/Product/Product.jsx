@@ -1,6 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
+import imgocr1 from '../Navbar/imgocr1.png';
 
 const Product = () => {
+  const handleClick = () => {
+    alert("Coming Soon");
+  };
+
   return (
     <>
       <div>
@@ -19,67 +25,73 @@ const Product = () => {
           {/* Cards */}
           <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
             {/* Card 1 */}
-            <div
+            <motion.div
               className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs h-90 md:max-w-sm"
               style={{ height: "52vh" }}
+              whileHover={{ scale: 1.05, rotate: 3 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <img
-                className="w-full h-48 object-cover"
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
-                alt="Product 1"
-              />
-              <div className="p-6">
-                <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
-                <p>
-                  Ayn OCR is our Arabic OCR engine designed for precise data
-                  extraction from images and scanned PDFs with excep
-                </p>
-              </div>
-            </div>
+              <a href="#" onClick={handleClick}>
+                <img
+                  className="w-full h-48 object-cover"
+                  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
+                  alt="Product 1"
+                />
+                <div className="p-6">
+                  <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
+                  <p>
+                    Ayn OCR is our Arabic OCR engine designed for precise data
+                    extraction from images and scanned PDFs with exceptional accuracy.
+                  </p>
+                </div>
+              </a>
+            </motion.div>
 
             {/* Card 2 */}
-            <div
+            <motion.div
               className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
               style={{ height: "52vh" }}
+              whileHover={{ scale: 1.05, rotate: 3 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <img
-                className="w-full h-48 object-cover"
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
-                alt="Product 2"
-              />
-              <div className="p-6">
-                <strong className="text-xl mb-2 block">
-                  Invoice Extractor
-                </strong>
-                <p>
-                  Invoice Extractor leverages OCR and machine vision to
-                  accurately extract invoice data from scanned PDFs, powered by
-                  our Ayn OCR Engine
-                </p>
-              </div>
-            </div>
+              <a href="#" onClick={handleClick}>
+                <img
+                  className="w-full h-48 object-cover"
+                  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
+                  alt="Product 2"
+                />
+                <div className="p-6">
+                  <strong className="text-xl mb-2 block">Invoice Extractor</strong>
+                  <p>
+                    Invoice Extractor leverages OCR and machine vision to accurately
+                    extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
+                  </p>
+                </div>
+              </a>
+            </motion.div>
 
             {/* Card 3 */}
-            <div
+            <motion.div
               className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
               style={{ height: "52vh" }}
+              whileHover={{ scale: 1.05, rotate: 3 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <img
-                className="w-full h-48 object-cover"
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/pvbwn-AGB4zEzjr1FVVr0a.jpg"
-                alt="Product 3"
-              />
-              <div className="p-6">
-                <strong className="text-xl mb-2 block">
-                  ID Card Detail Extractor
-                </strong>
-                <p>
-                  ID Card Extractor uses advanced technology to accurately
-                  extract information from ID card images. Powered By our Ayn
-                  OCR engine
-                </p>
-              </div>
-            </div>
+              <a href="#" onClick={handleClick}>
+                <img
+                  className="w-full h-48 object-cover"
+                  src={imgocr1}
+                  alt="Product 3"
+                />
+                <div className="p-6">
+                  <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
+                  <p>
+                    ID Card Extractor uses advanced technology to accurately extract
+                    information from ID card images. Powered by our Ayn OCR engine.
+                  </p>
+                </div>
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>
