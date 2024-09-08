@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import imgocr1 from '../Navbar/imgocr1.png';
 

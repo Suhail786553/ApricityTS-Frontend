@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -97,6 +97,21 @@ const Navbar = () => {
                   }`}
                 ></span>
               </li>
+              <li className="relative group">
+                <a
+                  href="/contact"
+                  className={`text-purple-800 hover:text-black ${
+                    currentPath === "/contact" ? "underline-active" : ""
+                  }`}
+                >
+                  Contact Us
+                </a>
+                <span
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${
+                    currentPath === "/contact" ? "scale-x-100" : "scale-x-0"
+                  }`}
+                ></span>
+              </li>
             </ul>
             <div className="flex space-x-4" style={{ fontSize: "20px" }}>
               <a
@@ -170,6 +185,11 @@ const Navbar = () => {
             <li>
               <a href="/about" className="text-gray-800 hover:text-gray-500">
                 About
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="text-gray-800 hover:text-gray-500">
+                Contact Us
               </a>
             </li>
             <div className="flex space-x-4">

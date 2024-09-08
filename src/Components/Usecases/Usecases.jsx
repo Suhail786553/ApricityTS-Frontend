@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {FaInstagram,FaLinkedin} from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
