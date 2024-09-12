@@ -156,76 +156,76 @@ const Hero = () => {
 
         {/* Cards */}
         <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-            {/* Card 1 */}
-            <motion.div
-              className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs h-90 md:max-w-sm"
-              style={{ height: "52vh" }}
-              whileHover={{ scale: 1.05, rotate: 3 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <a href="#" onClick={handleClick}>
-                <img
-                  className="w-full h-48 object-cover"
-                  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
-                  alt="Product 1"
-                />
-                <div className="p-6">
-                  <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
-                  <p>
-                    Ayn OCR is our Arabic OCR engine designed for precise data
-                    extraction from images and scanned PDFs with exceptional accuracy.
-                  </p>
-                </div>
-              </a>
-            </motion.div>
+          {/* Card 1 */}
+          <motion.div
+            className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs h-90 md:max-w-sm"
+            style={{ height: "52vh" }}
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <a href="#" onClick={handleClick}>
+              <img
+                className="w-full h-48 object-cover"
+                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
+                alt="Product 1"
+              />
+              <div className="p-6">
+                <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
+                <p>
+                  Ayn OCR is our Arabic OCR engine designed for precise data
+                  extraction from images and scanned PDFs with exceptional accuracy.
+                </p>
+              </div>
+            </a>
+          </motion.div>
 
-            {/* Card 2 */}
-            <motion.div
-              className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
-              style={{ height: "52vh" }}
-              whileHover={{ scale: 1.05, rotate: 3 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <a href="#" onClick={handleClick}>
-                <img
-                  className="w-full h-48 object-cover"
-                  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
-                  alt="Product 2"
-                />
-                <div className="p-6">
-                  <strong className="text-xl mb-2 block">Invoice Extractor</strong>
-                  <p>
-                    Invoice Extractor leverages OCR and machine vision to accurately
-                    extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
-                  </p>
-                </div>
-              </a>
-            </motion.div>
+          {/* Card 2 */}
+          <motion.div
+            className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
+            style={{ height: "52vh" }}
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <a href="#" onClick={handleClick}>
+              <img
+                className="w-full h-48 object-cover"
+                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
+                alt="Product 2"
+              />
+              <div className="p-6">
+                <strong className="text-xl mb-2 block">Invoice Extractor</strong>
+                <p>
+                  Invoice Extractor leverages OCR and machine vision to accurately
+                  extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
+                </p>
+              </div>
+            </a>
+          </motion.div>
 
-            {/* Card 3 */}
-            <motion.div
-              className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
-              style={{ height: "52vh" }}
-              whileHover={{ scale: 1.05, rotate: 3 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <a href="#" onClick={handleClick}>
-                <img
-                  className="w-full h-48 object-cover"
-                  src={imgocr1}
-                  alt="Product 3"
-                />
-                <div className="p-6">
-                  <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
-                  <p>
-                    ID Card Extractor uses advanced technology to accurately extract
-                    information from ID card images. Powered by our Ayn OCR engine.
-                  </p>
-                </div>
-              </a>
-            </motion.div>
-          </div>
+          {/* Card 3 */}
+          <motion.div
+            className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
+            style={{ height: "52vh" }}
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <a href="#" onClick={handleClick}>
+              <img
+                className="w-full h-48 object-cover"
+                src={imgocr1}
+                alt="Product 3"
+              />
+              <div className="p-6">
+                <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
+                <p>
+                  ID Card Extractor uses advanced technology to accurately extract
+                  information from ID card images. Powered by our Ayn OCR engine.
+                </p>
+              </div>
+            </a>
+          </motion.div>
         </div>
+      </div>
       <div className="bg-[#904AF2] text-white py-16 px-4 text-center">
         {/* Star Rating */}
         <div className="flex justify-center mb-4">
@@ -237,7 +237,7 @@ const Hero = () => {
         {/* Testimonial Content */}
         <p className="font-noto text-[20px] max-w-2xl mx-auto leading-relaxed">
           The Arabic OCR engine from Apricityts has revolutionized our document
-          processing. It's accurate, efficient, and a game-changer for our
+          processing. Its accurate, efficient, and a game-changer for our
           business.
         </p>
 
@@ -286,6 +286,102 @@ const Hero = () => {
           <iframe
             className="w-8/12 h-96 rounded-lg shadow-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28480.86062327462!2d80.85467682443611!3d26.836530458296963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfe5d323b520b%3A0x2f011730d8522686!2sRajajipuram%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1725468455650!5m2!1sen!2sin"></iframe>
+        </div>
+      </div>
+      <div className="bg-gradient-to-br from-[#176BE0] via-[#904AF2] to-[#904AF2] py-16 px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-white text-4xl font-semibold mb-4">What Our Clients Say</h2>
+            <p className="text-white text-lg">See how our solutions are transforming businesses in the UAE and beyond</p>
+          </div>
+
+          {/* Testimonials */}
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
+            {/* Testimonial 1 */}
+            <motion.div
+              className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div>
+                <div className="flex justify-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="text-[#904AF2] text-lg" />
+                  ))}
+                </div>
+                <p className="text-gray-800 text-lg italic mb-6 leading-relaxed">
+                  The Arabic OCR engine from Apricityts has revolutionized our document processing. Its accurate, efficient, and a game-changer for our business.
+                </p>
+              </div>
+              <div className="flex items-center justify-center space-x-4">
+                <img
+                  className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
+                  src="https://images.unsplash.com/photo-1710993011836-108ba89ebe51?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxOXx8YWklMjBzb2x1dGlvbnN8ZW58MHx8fHwxNzIzNDY0MDYyfDA&ixlib=rb-4.0.3&auto=format&fit=crop&w=48&h=48"
+                  alt="Customer 1"
+                />
+                <div>
+                  <h4 className="text-xl font-bold">John Doe</h4>
+                  <p className="text-gray-600">CEO, Tech Company</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Testimonial 2 */}
+            <motion.div
+              className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div>
+                <div className="flex justify-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="text-[#904AF2] text-lg" />
+                  ))}
+                </div>
+                <p className="text-gray-800 text-lg italic mb-6 leading-relaxed">
+                  Our company has been using the OCR solutions by Apricityts for months now, and the efficiency boost is remarkable.
+                </p>
+              </div>
+              <div className="flex items-center justify-center space-x-4">
+                <img
+                  className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxjbGVhbnxlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80"
+                  alt="Customer 2"
+                />
+                <div>
+                  <h4 className="text-xl font-bold">Jane Smith</h4>
+                  <p className="text-gray-600">COO, Finance Firm</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Testimonial 3 */}
+            <motion.div
+              className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div>
+                <div className="flex justify-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="text-[#904AF2] text-lg" />
+                  ))}
+                </div>
+                <p className="text-gray-800 text-lg italic mb-6 leading-relaxed">
+                  The integration process was seamless, and the customer support has been fantastic.
+                </p>
+              </div>
+              <div className="flex items-center justify-center space-x-4">
+                <img
+                  className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
+                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxOXx8dGVhbXxlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80"
+                  alt="Customer 3"
+                />
+                <div>
+                  <h4 className="text-xl font-bold">Emily White</h4>
+                  <p className="text-gray-600">Marketing Manager, Retail Company</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </>
