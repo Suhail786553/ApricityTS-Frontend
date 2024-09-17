@@ -3,6 +3,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useLocation } from "react-router-dom"; // For tracking the current route
+import img from './img.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +27,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 py-10">
           <div className="flex-shrink-0">
             <img
-              className="h-8 w-20 md:h-10 md:w-60"
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=404,fit=crop,q=95/YZ9bEQRPa4i5BwKB/logo-Yg294oB3LLFrGjQ8.png"
+              className="h-14 w-50 md:h-12 md:w-80"
+              src={img}
               alt="Logo"
             />
           </div>

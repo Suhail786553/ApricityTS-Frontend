@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaStar } from "react-icons/fa";
-import backgroundVideo from "../About/recv.mov";
+import backgroundVideo from "../About/vid.mp4";
 import imgocr1 from '../Navbar/imgocr1.png';
 import { motion } from "framer-motion";
 
