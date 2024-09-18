@@ -58,20 +58,27 @@ const Footer = () => {
           <p className="mb-4">query@apricityts.com</p>
         </div>
 
-        {/* Right Section */}
+        {/* Right Section: Featured AI Services */}
         <div className="md:ml-auto w-full md:w-auto">
-          <h5 className="text-xl font-semibold mb-2">AI</h5>
-          <p className="mb-4">Accelerate business processes with AI</p>
-          <div className="mb-4 flex flex-col space-y-4">
-            <input
-              type="text"
-              placeholder="Enter Your Email Address"
-              className="p-3 rounded-md text-black"
-            />
-            <button className="bg-[#904af2] w-60 text-white p-3 rounded-md" style={{borderRadius:"40px"}}>
-              Submit Your Email Address
-            </button>
-          </div>
+          <h5 className="text-xl font-semibold mb-2">Featured AI Services</h5>
+          <ul className="space-y-2">
+            <li className="flex items-center space-x-2">
+              <span className="bg-[#904af2] p-1 rounded-full w-2 h-2"></span>
+              <p>AI-driven Business Analytics</p>
+            </li>
+            <li className="flex items-center space-x-2">
+              <span className="bg-[#904af2] p-1 rounded-full w-2 h-2"></span>
+              <p>Custom AI Development</p>
+            </li>
+            <li className="flex items-center space-x-2">
+              <span className="bg-[#904af2] p-1 rounded-full w-2 h-2"></span>
+              <p>AI-powered Automation Tools</p>
+            </li>
+            <li className="flex items-center space-x-2">
+              <span className="bg-[#904af2] p-1 rounded-full w-2 h-2"></span>
+              <p>AI-driven Customer Insights</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 h-20 static ..."style={{
+    <nav className="bg-white shadow-lg sticky top-0 h-20 static ..." style={{
       zIndex: '1', // This ensures the menu appears above the video
       background: 'white', // Optional: semi-transparent background for the menu
       // padding: '10px',
@@ -40,77 +40,67 @@ const Navbar = () => {
               <li className="relative group">
                 <a
                   href="/"
-                  className={`text-black-800 hover:text-purple-600 ${
-                    currentPath === "/" ? "underline-active" : ""
-                  }`}
+                  className={`text-black-800 hover:text-purple-600 ${currentPath === "/" ? "underline-active" : ""
+                    }`}
                 >
                   Home
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${
-                    currentPath === "/" ? "scale-x-100" : "scale-x-0"
-                  }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/" ? "scale-x-100" : "scale-x-0"
+                    }`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/products"
-                  className={`text-purple-800 hover:text-black ${
-                    currentPath === "/products" ? "underline-active" : ""
-                  }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/products" ? "underline-active" : ""
+                    }`}
                   style={{ fontFamily: "sans-serif Noto-sans" }}
                 >
                   Products
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${
-                    currentPath === "/products" ? "scale-x-100" : "scale-x-0"
-                  }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/products" ? "scale-x-100" : "scale-x-0"
+                    }`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/usecases"
-                  className={`text-purple-800 hover:text-black ${
-                    currentPath === "/usecases" ? "underline-active" : ""
-                  }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/usecases" ? "underline-active" : ""
+                    }`}
                 >
                   Use cases
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${
-                    currentPath === "/usecases" ? "scale-x-100" : "scale-x-0"
-                  }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/usecases" ? "scale-x-100" : "scale-x-0"
+                    }`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/about"
-                  className={`text-purple-800 hover:text-black ${
-                    currentPath === "/about" ? "underline-active" : ""
-                  }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/about" ? "underline-active" : ""
+                    }`}
                 >
                   About
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${
-                    currentPath === "/about" ? "scale-x-100" : "scale-x-0"
-                  }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/about" ? "scale-x-100" : "scale-x-0"
+                    }`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/contact"
-                  className={`text-purple-800 hover:text-black ${
-                    currentPath === "/contact" ? "underline-active" : ""
-                  }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/contact" ? "underline-active" : ""
+                    }`}
                 >
                   Contact Us
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${
-                    currentPath === "/contact" ? "scale-x-100" : "scale-x-0"
-                  }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/contact" ? "scale-x-100" : "scale-x-0"
+                    }`}
                 ></span>
               </li>
             </ul>
