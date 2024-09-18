@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 py-10">
           <div className="flex-shrink-0">
             <img
-              className="h-14 w-50 md:h-12 md:w-80"
+              className="h-14 w-04 md:h-12 md:w-70"
               src={img}
               alt="Logo"
             />
