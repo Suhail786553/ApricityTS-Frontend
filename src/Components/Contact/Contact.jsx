@@ -62,7 +62,7 @@ const OwnerLogin = () => {
             <div className="space-y-6">
               {/* Office Locations */}
               <div><strong>Lucknow</strong><p>537U/0777-G, FaizullahGanj-III, Bharat Nagar, Lucknow, <br /> Uttar Pradesh, INDIA - 226020</p></div>
-              <div><strong>Bangalore</strong><p>1st Cross Kankanagar Opp. Manyata Tech Park, Hebbal, <br /> Bangalore, INDIA - 560045</p></div>
+              {/* <div><strong>Bangalore</strong><p>1st Cross Kankanagar Opp. Manyata Tech Park, Hebbal, <br /> Bangalore, INDIA - 560045</p></div> */}
               <div><strong>Mauritius</strong><p>Jackaria Road, Les Pailles, Port Louis, MAURITIUS - 11205</p></div>
               <div><strong>United States</strong><p>1786 Heritage Lane #2006, Sacramento, CA, USA - 95815</p></div>
             </div>

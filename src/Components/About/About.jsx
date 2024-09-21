@@ -88,7 +88,7 @@ const Section = () => {
                 <br />
                 <br />
                 Discover how Apricity TS can transform your operations with our
-                innovative solutions and become a catalyst for your business's
+                innovative solutions and become a catalyst for your business
                 success.
               </p>
             </div>
@@ -117,14 +117,14 @@ const Section = () => {
                 </p>
               </div>
               {/* Repeat for Lucknow 2 */}
-              <div>
+              {/* <div>
                 <strong>Banglore</strong>
                 <p>
                   1st Cross Kankanagar Opp. Manyata Tech Park, Hebbal,
                   <br></br>{" "}
                   Bangalore, INDIA - 560045
                 </p>
-              </div>
+              </div> */}
               {/* Repeat for Lucknow 3 */}
               <div>
                 <strong>Mauritius</strong>
