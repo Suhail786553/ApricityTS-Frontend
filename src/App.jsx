@@ -6,7 +6,6 @@ import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Contact from './Components/Contact/Contact';
 import Usecases from './Components/Usecases/Usecases';
-// import OwnerLogin from "./Components/Login/OwnerLogin";
 import BackupPage from "./Components/Login/BackupPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

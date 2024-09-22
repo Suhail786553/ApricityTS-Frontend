@@ -1,4 +1,3 @@
-// import React from "react";
 import Slider from "react-slick";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
