@@ -22,9 +22,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/usecases" element={<Usecases />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/login" element={<OwnerLogin />} /> */}
         <Route path="/backup" element={<BackupPage />} />
-        {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
