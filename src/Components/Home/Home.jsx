@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import backgroundVideo from "../About/vid.mp4";
 import imgocr1 from '../Navbar/imgocr1.png';
 import { motion } from "framer-motion";
+// import './Home.css';
 
 const Hero = () => {
   const [count50, setCount50] = useState(0);
@@ -41,6 +42,7 @@ const Hero = () => {
           loop
           muted
           className="absolute inset-0 w-full h-full object-cover z-0"
+          poster="path-to-poster-image.jpg"
           style={{
             position: 'absolute',
             top: 0,
@@ -83,63 +85,65 @@ const Hero = () => {
       </div>
 
       <div
-        ref={ref}
-        className="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"
-      >
-        {/* Left Content */}
-        <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
-          <p className="text-black-700 text-base md:text-base leading-relaxed mb-8">
-            We specialize in providing computer vision and generative AI
-            solutions that can easily integrate with your existing services,
-            improving the overall intelligence of your business operations. Our
-            solutions are designed to be plug-and-play, making it simple for you
-            to enhance the capabilities of your services without unnecessary
-            complications. With our expertise in AI technology, we can help
-            streamline your processes, improve efficiency, and provide valuable
-            insights to drive your business forward. By leveraging our
-            innovative solutions, you can stay ahead of the competition and meet
-            the evolving needs of your customers. Let us help you unlock the
-            full potential of your business with our cutting-edge AI solutions.
-          </p>
-          <p className="text-gray-600 text-lg md:text-base font-semibold mb-8">
-            Empowering UAE Businesses with AI Solutions for Efficiency and
-            Growth
-          </p>
-          <div className="flex justify-center md:justify-start items-center space-x-12">
-            <div className="text-center">
-              <p
-                className="text-5xl font-bold"
-                style={{ color: "rgb(145, 76, 242)" }}
-              >
-                {count50}+
-              </p>
-              <p className="text-gray-700 text-sm md:text-base mt-2">
-                Trusted Partner
-              </p>
-            </div>
-            <div className="text-center">
-              <p
-                className="text-5xl font-bold"
-                style={{ color: "rgb(145, 76, 242)" }}
-              >
-                {count15}
-              </p>
-              <p className="text-gray-700 text-sm md:text-base mt-2">
-                Leading AI Innovators
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Image */}
-        <div className="md:w-2/5 flex justify-center items-center">
-          <img
-            className="w-full md:w-full max-w-full h-auto rounded-xl shadow-md"
-            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=656&h=560"
-            alt="AI Solutions"
-          />
-        </div>
+  ref={ref}
+  className="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"
+>
+  {/* Left Content */}
+  <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
+    <p className="text-black-700 text-base leading-relaxed mb-8">
+      We specialize in providing computer vision and generative AI solutions
+      that can easily integrate with your existing services, improving the
+      overall intelligence of your business operations. Our solutions are
+      designed to be plug-and-play, making it simple for you to enhance the
+      capabilities of your services without unnecessary complications. With our
+      expertise in AI technology, we can help streamline your processes,
+      improve efficiency, and provide valuable insights to drive your business
+      forward. By leveraging our innovative solutions, you can stay ahead of
+      the competition and meet the evolving needs of your customers. Let us
+      help you unlock the full potential of your business with our cutting-edge
+      AI solutions.
+    </p>
+    <p className="text-gray-600 text-lg font-semibold mb-8">
+      Empowering UAE Businesses with AI Solutions for Efficiency and Growth
+    </p>
+    <div className="flex justify-center md:justify-start items-center space-x-12">
+      <div className="text-center">
+        <p
+          className="text-5xl font-bold"
+          style={{ color: "rgb(145, 76, 242)" }}
+        >
+          {count50}+ 
+        </p>
+        <p className="text-gray-700 text-sm md:text-base mt-2">
+          Trusted Partner
+        </p>
       </div>
+      <div className="text-center">
+        <p
+          className="text-5xl font-bold"
+          style={{ color: "rgb(145, 76, 242)" }}
+        >
+          {count15}
+        </p>
+        <p className="text-gray-700 text-sm md:text-base mt-2">
+          Leading AI Innovators
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Image */}
+  <div className="image md:w-2/5 flex justify-center items-center">
+    <img
+      className="w-full h-auto max-w-full md:max-w-xl lg:max-w-2xl rounded-xl shadow-md"
+      src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=656&h=560"
+      alt="AI Solutions"
+      style={{ maxWidth: '100vw', height: '60vh' }} // Ensure the image scales appropriately
+    />
+  </div>
+</div>
+
+
       {/* The rest of your component */}
 
       <div className="bg-black text-white py-16">
@@ -156,76 +160,75 @@ const Hero = () => {
 
         {/* Cards */}
         <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-          {/* Card 1 */}
-          <motion.div
-            className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs h-90 md:max-w-sm"
-            style={{ height: "52vh" }}
-            whileHover={{ scale: 1.05, rotate: 3 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <a href="#" onClick={handleClick}>
-              <img
-                className="w-full h-48 object-cover"
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
-                alt="Product 1"
-              />
-              <div className="p-6">
-                <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
-                <p>
-                  Ayn OCR is our Arabic OCR engine designed for precise data
-                  extraction from images and scanned PDFs with exceptional accuracy.
-                </p>
-              </div>
-            </a>
-          </motion.div>
-
-          {/* Card 2 */}
-          <motion.div
-            className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
-            style={{ height: "52vh" }}
-            whileHover={{ scale: 1.05, rotate: 3 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <a href="#" onClick={handleClick}>
-              <img
-                className="w-full h-48 object-cover"
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
-                alt="Product 2"
-              />
-              <div className="p-6">
-                <strong className="text-xl mb-2 block">Invoice Extractor</strong>
-                <p>
-                  Invoice Extractor leverages OCR and machine vision to accurately
-                  extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
-                </p>
-              </div>
-            </a>
-          </motion.div>
-
-          {/* Card 3 */}
-          <motion.div
-            className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm"
-            style={{ height: "52vh" }}
-            whileHover={{ scale: 1.05, rotate: 3 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <a href="#" onClick={handleClick}>
-              <img
-                className="w-full h-48 object-cover"
-                src={imgocr1}
-                alt="Product 3"
-              />
-              <div className="p-6">
-                <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
-                <p>
-                  ID Card Extractor uses advanced technology to accurately extract
-                  information from ID card images. Powered by our Ayn OCR engine.
-                </p>
-              </div>
-            </a>
-          </motion.div>
-        </div>
+  {/* Card 1 */}
+  <motion.div
+    className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
+    style={{ minHeight: "400px" }}  // Set a minimum height for the card
+    whileHover={{ scale: 1.05, rotate: 3 }}
+    transition={{ type: "spring", stiffness: 300 }}
+  >
+    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+      <img
+        className="w-full h-40 object-cover"  // Adjust image height
+        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
+        alt="Product 1"
+      />
+      <div className="p-4 flex-grow"> {/* Allow this section to grow */}
+        <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
+        <p className="text-base line-clamp-3">
+          Ayn OCR is our Arabic OCR engine designed for precise data extraction from images and scanned PDFs with exceptional accuracy.
+        </p>
       </div>
+    </a>
+  </motion.div>
+
+  {/* Card 2 */}
+  <motion.div
+    className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
+    style={{ minHeight: "400px" }}  // Set a minimum height for the card
+    whileHover={{ scale: 1.05, rotate: 3 }}
+    transition={{ type: "spring", stiffness: 300 }}
+  >
+    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+      <img
+        className="w-full h-40 object-cover"  // Adjust image height
+        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
+        alt="Product 2"
+      />
+      <div className="p-4 flex-grow"> {/* Allow this section to grow */}
+        <strong className="text-xl mb-2 block">Invoice Extractor</strong>
+        <p className="text-base line-clamp-3">
+          Invoice Extractor leverages OCR and machine vision to accurately extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
+        </p>
+      </div>
+    </a>
+  </motion.div>
+
+  {/* Card 3 */}
+  <motion.div
+    className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
+    style={{ minHeight: "400px" }}  // Set a minimum height for the card
+    whileHover={{ scale: 1.05, rotate: 3 }}
+    transition={{ type: "spring", stiffness: 300 }}
+  >
+    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+      <img
+        className="w-full h-40 object-cover"  // Adjust image height
+        src={imgocr1}
+        alt="Product 3"
+      />
+      <div className="p-4 flex-grow"> {/* Allow this section to grow */}
+        <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
+        <p className="text-base line-clamp-3">
+          ID Card Extractor uses advanced technology to accurately extract information from ID card images. Powered by our Ayn OCR engine.
+        </p>
+      </div>
+    </a>
+  </motion.div>
+</div>
+
+
+        </div>
       <div className="bg-[#904AF2] text-white py-16 px-4 text-center">
         {/* Star Rating */}
         <div className="flex justify-center mb-4">
