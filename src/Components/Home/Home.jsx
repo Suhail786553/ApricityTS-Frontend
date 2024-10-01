@@ -286,7 +286,7 @@ const Hero = () => {
         </div>
 
         {/* Right Map */}
-        <div className="md:w-2/3 flex justify-center items-center">
+        <div className=" sm:w-11/12 md:w-2/3 flex justify-center items-center">
           <iframe
             className="w-8/12 h-96 rounded-lg shadow-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28480.86062327462!2d80.85467682443611!3d26.836530458296963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfe5d323b520b%3A0x2f011730d8522686!2sRajajipuram%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1725468455650!5m2!1sen!2sin"></iframe>
@@ -302,90 +302,94 @@ const Hero = () => {
 
           {/* Testimonials */}
           <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-            {/* Testimonial 1 */}
-            <motion.div
-              className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div>
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="text-[#904AF2] text-lg" />
-                  ))}
-                </div>
-                <p className="text-gray-800 text-lg italic mb-6 leading-relaxed">
-                  The Arabic OCR engine from Apricityts has revolutionized our document processing. Its accurate, efficient, and a game-changer for our business.
-                </p>
-              </div>
-              <div className="flex items-center justify-center space-x-4">
-                <img
-                  className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
-                  src="https://images.unsplash.com/photo-1710993011836-108ba89ebe51?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxOXx8YWklMjBzb2x1dGlvbnN8ZW58MHx8fHwxNzIzNDY0MDYyfDA&ixlib=rb-4.0.3&auto=format&fit=crop&w=48&h=48"
-                  alt="Customer 1"
-                />
-                <div>
-                  <h4 className="text-xl font-bold">John Doe</h4>
-                  <p className="text-gray-600">CEO, Tech Company</p>
-                </div>
-              </div>
-            </motion.div>
+  {/* Testimonial 1 */}
+  <motion.div
+    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
+    h-[calc(20rem)] md:h-[28rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[20rem] sm:h-[25rem] md:sm:h-[25rem] lg:sm:h-[25rem] xl:sm:h-[25rem] 2xl:sm:h-[25rem]"
+    whileHover={{ scale: 1.05 }}
+  >
+    <div>
+      <div className="flex justify-center mb-4">
+        {[...Array(5)].map((_, i) => (
+          <FaStar key={i} className="text-[#904AF2] text-lg" />
+        ))}
+      </div>
+      <p className="text-gray-800 text-lg italic mb-2 leading-relaxed">
+        The Arabic OCR engine from Apricityts has revolutionized our document processing. Its accurate, efficient, and a game-changer for our business.
+      </p>
+    </div>
+    <div className="flex items-center justify-center space-x-4 mt-2">
+      <img
+        className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
+        src="https://images.unsplash.com/photo-1710993011836-108ba89ebe51?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxOXx8YWklMjBzb2x1dGlvbnN8ZW58MHx8fHwxNzIzNDY0MDYyfDA&ixlib=rb-4.0.3&auto=format&fit=crop&w=48&h=48"
+        alt="Customer 1"
+      />
+      <div>
+        <h4 className="text-xl font-bold">John Doe</h4>
+        <p className="text-gray-600">CEO, Tech Company</p>
+      </div>
+    </div>
+  </motion.div>
 
-            {/* Testimonial 2 */}
-            <motion.div
-              className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div>
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="text-[#904AF2] text-lg" />
-                  ))}
-                </div>
-                <p className="text-gray-800 text-lg italic mb-6 leading-relaxed">
-                  Our company has been using the OCR solutions by Apricityts for months now, and the efficiency boost is remarkable.
-                </p>
-              </div>
-              <div className="flex items-center justify-center space-x-4">
-                <img
-                  className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxjbGVhbnxlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80"
-                  alt="Customer 2"
-                />
-                <div>
-                  <h4 className="text-xl font-bold">Jane Smith</h4>
-                  <p className="text-gray-600">COO, Finance Firm</p>
-                </div>
-              </div>
-            </motion.div>
+  {/* Testimonial 2 */}
+  <motion.div
+    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
+    h-[calc(20rem)] md:h-[28rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[20rem] sm:h-[25rem] md:sm:h-[25rem] lg:sm:h-[25rem] xl:sm:h-[25rem] 2xl:sm:h-[25rem]"
+    whileHover={{ scale: 1.05 }}
+  >
+    <div>
+      <div className="flex justify-center mb-4">
+        {[...Array(5)].map((_, i) => (
+          <FaStar key={i} className="text-[#904AF2] text-lg" />
+        ))}
+      </div>
+      <p className="text-gray-800 text-lg italic mb-2 leading-relaxed">
+        Our company has been using the OCR solutions by Apricityts for months now, and the efficiency boost is remarkable.
+      </p>
+    </div>
+    <div className="flex items-center justify-center space-x-4 mt-2">
+      <img
+        className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHw2fHxjbGVhbnxlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80"
+        alt="Customer 2"
+      />
+      <div>
+        <h4 className="text-xl font-bold">Jane Smith</h4>
+        <p className="text-gray-600">COO, Finance Firm</p>
+      </div>
+    </div>
+  </motion.div>
 
-            {/* Testimonial 3 */}
-            <motion.div
-              className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div>
-                <div className="flex justify-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="text-[#904AF2] text-lg" />
-                  ))}
-                </div>
-                <p className="text-gray-800 text-lg italic mb-6 leading-relaxed">
-                  The integration process was seamless, and the customer support has been fantastic.
-                </p>
-              </div>
-              <div className="flex items-center justify-center space-x-4">
-                <img
-                  className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
-                  src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxOXx8dGVhbXxlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80"
-                  alt="Customer 3"
-                />
-                <div>
-                  <h4 className="text-xl font-bold">Emily White</h4>
-                  <p className="text-gray-600">Marketing Manager, Retail Company</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+  {/* Testimonial 3 */}
+  <motion.div
+    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
+    h-[calc(20rem)] md:h-[28rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[20rem] sm:h-[25rem] md:sm:h-[25rem] lg:sm:h-[25rem] xl:sm:h-[25rem] 2xl:sm:h-[25rem]"
+    whileHover={{ scale: 1.05 }}
+  >
+    <div>
+      <div className="flex justify-center mb-4">
+        {[...Array(5)].map((_, i) => (
+          <FaStar key={i} className="text-[#904AF2] text-lg" />
+        ))}
+      </div>
+      <p className="text-gray-800 text-lg italic mb-2 leading-relaxed">
+        The integration process was seamless, and the customer support has been fantastic.
+      </p>
+    </div>
+    <div className="flex items-center justify-center space-x-4 mt-2">
+      <img
+        className="w-16 h-16 rounded-full border-2 border-[#904AF2]"
+        src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=M3wzOTE5Mjl8MHwxfHNlYXJjaHwxOXx8dGVhbXxlbnwwfHx8fDE3MjM0NjQwNjJ8MA&ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80"
+        alt="Customer 3"
+      />
+      <div>
+        <h4 className="text-xl font-bold">Emily White</h4>
+        <p className="text-gray-600">Marketing Manager, Retail Company</p>
+      </div>
+    </div>
+  </motion.div>
+</div>
+
         </div>
       </div>
     </>
