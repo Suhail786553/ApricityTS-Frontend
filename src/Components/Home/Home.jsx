@@ -163,17 +163,17 @@ const Hero = () => {
   {/* Card 1 */}
   <motion.div
     className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
-    style={{ minHeight: "400px" }}  // Set a minimum height for the card
+    style={{ minHeight: "400px" }}
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
     <a href="#" onClick={handleClick} className="flex flex-col h-full">
       <img
-        className="w-full h-40 object-cover"  // Adjust image height
+        className="w-full h-40 object-cover"
         src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
         alt="Product 1"
       />
-      <div className="p-4 flex-grow"> {/* Allow this section to grow */}
+      <div className="p-6 my-8 flex-grow"> {/* Increased padding here */}
         <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
         <p className="text-base line-clamp-3">
           Ayn OCR is our Arabic OCR engine designed for precise data extraction from images and scanned PDFs with exceptional accuracy.
@@ -185,17 +185,17 @@ const Hero = () => {
   {/* Card 2 */}
   <motion.div
     className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
-    style={{ minHeight: "400px" }}  // Set a minimum height for the card
+    style={{ minHeight: "400px" }}
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
     <a href="#" onClick={handleClick} className="flex flex-col h-full">
       <img
-        className="w-full h-40 object-cover"  // Adjust image height
+        className="w-full h-40 object-cover"
         src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
         alt="Product 2"
       />
-      <div className="p-4 flex-grow"> {/* Allow this section to grow */}
+      <div className="p-6 my-8 flex-grow"> {/* Increased padding here */}
         <strong className="text-xl mb-2 block">Invoice Extractor</strong>
         <p className="text-base line-clamp-3">
           Invoice Extractor leverages OCR and machine vision to accurately extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
@@ -207,17 +207,17 @@ const Hero = () => {
   {/* Card 3 */}
   <motion.div
     className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
-    style={{ minHeight: "400px" }}  // Set a minimum height for the card
+    style={{ minHeight: "400px" }}
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
     <a href="#" onClick={handleClick} className="flex flex-col h-full">
       <img
-        className="w-full h-40 object-cover"  // Adjust image height
+        className="w-full h-40 object-cover"
         src={imgocr1}
         alt="Product 3"
       />
-      <div className="p-4 flex-grow"> {/* Allow this section to grow */}
+      <div className="p-6 my-8 flex-grow"> {/* Increased padding here */}
         <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
         <p className="text-base line-clamp-3">
           ID Card Extractor uses advanced technology to accurately extract information from ID card images. Powered by our Ayn OCR engine.
@@ -226,6 +226,7 @@ const Hero = () => {
     </a>
   </motion.div>
 </div>
+
 
 
         </div>
