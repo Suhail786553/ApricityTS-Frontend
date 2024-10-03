@@ -86,10 +86,10 @@ const Hero = () => {
 
       <div
   ref={ref}
-  className="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"
+  className="flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"
 >
   {/* Left Content */}
-  <div className="md:w-1/2 mb-12 md:mb-0 text-center md:text-left">
+  <div className="md:w-1/2 flex-grow mb-12 md:mb-0 text-center md:text-left flex flex-col justify-between">
     <p className="text-black-700 text-base leading-relaxed mb-8">
       We specialize in providing computer vision and generative AI solutions
       that can easily integrate with your existing services, improving the
@@ -97,10 +97,10 @@ const Hero = () => {
       designed to be plug-and-play, making it simple for you to enhance the
       capabilities of your services without unnecessary complications. With our
       expertise in AI technology, we can help streamline your processes,
-      improve efficiency, and provide valuable insights to drive your business
+      improve efficiency,and provide valuable insights to drive your business
       forward. By leveraging our innovative solutions, you can stay ahead of
       the competition and meet the evolving needs of your customers. Let us
-      help you unlock the full potential of your business with our cutting-edge
+      help you unlock the full potential of your business with our  cutting<br></br>-edge
       AI solutions.
     </p>
     <p className="text-gray-600 text-lg font-semibold mb-8">
@@ -133,15 +133,15 @@ const Hero = () => {
   </div>
 
   {/* Right Image */}
-  <div className="image md:w-2/5 flex justify-center items-center">
+  <div className="image md:w-2/5 w-full flex-grow flex justify-center items-center">
     <img
-      className="w-full h-auto max-w-full md:max-w-xl lg:max-w-2xl rounded-xl shadow-md"
+      className="w-full h-full object-cover rounded-xl shadow-md"
       src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=656&h=560"
       alt="AI Solutions"
-      style={{ maxWidth: '100vw', height: '60vh' }} // Ensure the image scales appropriately
     />
   </div>
 </div>
+
 
 
       {/* The rest of your component */}
