@@ -32,7 +32,7 @@ const AiSolutionsSection = () => {
 
   const useCases = [
     {
-      title: "1. Automated Document Processing",
+      title: "1. Automated Processing",
       description:
         "Streamline digitization of Arabic-language documents, including invoices and ID cards, improving record-keeping.",
     },
@@ -111,11 +111,11 @@ const AiSolutionsSection = () => {
           <Slider {...sliderSettings}>
             {useCases.map((useCase, index) => (
               <div key={index} className="p-4">
-                <div className="bg-white shadow-lg rounded-lg p-6 h-full flex flex-col justify-between text-center border border-gray-300">
-                  <h3 className="text-lg font-bold text-[#1D1E20] mb-4">
+                <div className="bg-[#0d1b2b] hover:bg-[#176BE0] hover:shadow-2xl hover:-translate-y-2 transition-transform duration-300 ease-in-out shadow-lg rounded-lg p-6 h-full flex flex-col justify-between text-center border border-gray-300 cursor-pointer">
+                  <h3 className="text-lg font-bold text-white mb-4">
                     {useCase.title}
                   </h3>
-                  <p className="text-[#1D1E20]">{useCase.description}</p>
+                  <p className="text-white">{useCase.description}</p>
                 </div>
               </div>
             ))}
@@ -133,12 +133,12 @@ const AiSolutionsSection = () => {
             You didn’t come this far to stop
           </p>
           <div className="flex items-center space-x-4 mt-4 justify-center md:justify-start">
-            <button className="bg-[#176BE0] text-white py-2 px-4 md:w-1/4 h-12 rounded-full">
+            <button className="bg-[#176BE0] text-white py-2 px-4 md:w-1/4 h-12 rounded-full cursor-pointer">
               Create it
             </button>
             <a
               href="https://www.instagram.com/"
-              className="text-white-800 hover:text-white-500"
+              className="text-white-800 hover:text-white-500 cursor-pointer"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "20px", marginTop: "4px" }}
@@ -147,7 +147,7 @@ const AiSolutionsSection = () => {
             </a>
             <a
               href="https://www.linkedin.com/feed/"
-              className="text-white-800 hover:text-white-500"
+              className="text-white-800 hover:text-white-500 cursor-pointer"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "20px", marginTop: "4px" }}
@@ -156,7 +156,7 @@ const AiSolutionsSection = () => {
             </a>
             <a
               href="mailto:someone@example.com"
-              className="text-white-800 hover:text-white-500"
+              className="text-white-800 hover:text-white-500 cursor-pointer"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "20px", marginTop: "4px" }}
@@ -171,18 +171,18 @@ const AiSolutionsSection = () => {
           <img
             src="https://images.unsplash.com/photo-1526495124232-a04e1849168c?auto=format&fit=crop&w=720&h=1367"
             alt="First"
-            className="w-full md:w-1/2 h-[300px] md:h-[420px] rounded-lg"
+            className="w-full md:w-1/2 h-[300px] md:h-[420px] rounded-lg cursor-pointer"
           />
           <div className="flex flex-col w-full md:w-1/2 space-y-4">
             <img
               src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=720&h=656"
               alt="Second"
-              className="w-full h-[140px] md:h-[200px] rounded-lg"
+              className="w-full h-[140px] md:h-[200px] rounded-lg cursor-pointer"
             />
             <img
               src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=720&h=656"
               alt="Third"
-              className="w-full h-[140px] md:h-[200px] rounded-lg"
+              className="w-full h-[140px] md:h-[200px] rounded-lg cursor-pointer"
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useLocation } from "react-router-dom"; // For tracking the current route
 import img from './img.png';
@@ -106,7 +106,7 @@ const Navbar = () => {
             </ul>
             <div className="flex space-x-4" style={{ fontSize: "20px" }}>
               <a
-                href="https://www.facebook.com/"
+                href="#"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/apricity_ts/profilecard/?igsh=cHY2bjBrd2k3MHdi"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -122,21 +122,21 @@ const Navbar = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://www.linkedin.com/feed/"
+                href="https://www.linkedin.com/company/apricity-ts/"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin />
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaXTwitter />
-              </a>
+              </a> */}
             </div>
           </div>
           <div className="md:hidden">
@@ -185,7 +185,7 @@ const Navbar = () => {
             </li>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/"
+                href="#"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -193,7 +193,7 @@ const Navbar = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/apricity_ts/profilecard/?igsh=cHY2bjBrd2k3MHdi"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -201,16 +201,16 @@ const Navbar = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://www.linkedin.com/feed/"
+                href="https://www.linkedin.com/company/apricity-ts/"
                 className="text-gray-800 hover:text-gray-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin />
               </a>
-              <a href="https://twitter.com" className="text-gray-800 hover:text-gray-500">
+              {/* <a href="https://twitter.com" className="text-gray-800 hover:text-gray-500">
                 <FaXTwitter />
-              </a>
+              </a> */}
             </div>
           </ul>
         </div>

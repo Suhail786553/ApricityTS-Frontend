@@ -269,12 +269,12 @@ const Hero = () => {
               UAE, Dubai, and Gulf regions.
             </p>
             <div className="space-y-4">
-              <div>
+              {/* <div>
                 <strong className="block text-[#1D1E20] text-[20px] font-sans mb-1">
                   Success
                 </strong>
                 <p className="text-[#56585E] text-[16px]">123 Main Street</p>
-              </div>
+              </div> */}
               <div>
                 <strong className="block text-[#1D1E20] text-[20px] font-sans mb-1">
                   Hours
@@ -325,8 +325,8 @@ const Hero = () => {
         alt="Customer 1"
       />
       <div>
-        <h4 className="text-xl font-bold">John Doe</h4>
-        <p className="text-gray-600">CEO, Tech Company</p>
+        <h4 className="text-xl font-bold">Omar Khaled</h4>
+        {/* <p className="text-gray-600">CEO, Tech Company</p> */}
       </div>
     </div>
   </motion.div>
@@ -354,8 +354,8 @@ const Hero = () => {
         alt="Customer 2"
       />
       <div>
-        <h4 className="text-xl font-bold">Jane Smith</h4>
-        <p className="text-gray-600">COO, Finance Firm</p>
+        <h4 className="text-xl font-bold">Zainab Ali </h4>
+        {/* <p className="text-gray-600">COO, Finance Firm</p> */}
       </div>
     </div>
   </motion.div>
@@ -383,8 +383,8 @@ const Hero = () => {
         alt="Customer 3"
       />
       <div>
-        <h4 className="text-xl font-bold">Emily White</h4>
-        <p className="text-gray-600">Marketing Manager, Retail Company</p>
+        <h4 className="text-xl font-bold">Ahmed Salah </h4>
+        {/* <p className="text-gray-600">Marketing Manager, Retail Company</p> */}
       </div>
     </div>
   </motion.div>
