@@ -106,7 +106,7 @@ const OwnerLogin = () => {
 
           {/* Right Div with Form and Animation */}
           <motion.div
-            className="flex flex-col w-full md:w-2/5 shadow-lg p-4 bg-white rounded-lg"
+            className="flex flex-col w-full md:w-2/5 shadow-lg p-12 bg-white rounded-lg"
             initial="hidden"
             animate="visible"
             variants={animationRight}
