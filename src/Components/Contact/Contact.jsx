@@ -90,7 +90,7 @@ const OwnerLogin = () => {
             >
               Get in Touch
             </h6>
-            <h2 className="text-lg mb-6 text-[45px] leading-10" style={{ color: "#904af2", fontFamily: "sans-serif" }}>
+            <h2 className="text-lg mb-6 leading-10" style={{ color: "#904af2", fontFamily: "sans-serif", fontSize:"40px" }}>
               Are you ready to talk to <br />
               us?
             </h2>
@@ -99,7 +99,7 @@ const OwnerLogin = () => {
               <MdOutlineEmail className="text-3xl" />
               <div>
                 <p className="font-semibold">Email</p>
-                <p>contact@example.com</p>
+                <p>query@apricityts.com</p>
               </div>
             </div>
           </motion.div>
