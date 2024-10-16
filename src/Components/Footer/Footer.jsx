@@ -1,6 +1,6 @@
 // import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+// import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex space-x-4 mb-4">
             {/* Social Media Icons */}
             <a
-              href="https://www.facebook.com/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white-800 text-2xl hover:text-white-500"
@@ -23,7 +23,7 @@ const Footer = () => {
               <FaFacebook />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/apricity_ts/profilecard/?igsh=cHY2bjBrd2k3MHdi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white-800 text-2xl hover:text-white-500"
@@ -31,21 +31,21 @@ const Footer = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://www.linkedin.com/feed/"
+              href="https://www.linkedin.com/company/apricity-ts/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white-800 text-2xl hover:text-white-500"
             >
               <FaLinkedin />
             </a>
-            <a
-              href="https://twitter.com"
+            {/* <a
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white-800 text-2xl hover:text-white-500"
             >
               <FaXTwitter />
-            </a>
+            </a> */}
           </div>
 
           <p>© 2024. All rights reserved.</p>

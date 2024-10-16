@@ -4,7 +4,6 @@ import { FaStar } from "react-icons/fa";
 import backgroundVideo from "../About/vid.mp4";
 import imgocr1 from '../Navbar/imgocr1.png';
 import { motion } from "framer-motion";
-// import './Home.css';
 
 const Hero = () => {
   const [count50, setCount50] = useState(0);
@@ -13,9 +12,6 @@ const Hero = () => {
     triggerOnce: true,
     threshold: 0.5,
   });
-  const handleClick = () => {
-    alert("Coming Soon");
-  };
   useEffect(() => {
     if (inView) {
       const interval50 = setInterval(() => {
@@ -167,7 +163,7 @@ const Hero = () => {
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+    <a href="/result" className="flex flex-col h-full">
       <img
         className="w-full h-40 object-cover"
         src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
@@ -189,7 +185,7 @@ const Hero = () => {
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+    <a href="/result"  className="flex flex-col h-full">
       <img
         className="w-full h-40 object-cover"
         src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
@@ -211,7 +207,7 @@ const Hero = () => {
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+    <a href="/result"  className="flex flex-col h-full">
       <img
         className="w-full h-40 object-cover"
         src={imgocr1}
@@ -304,7 +300,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
   {/* Testimonial 1 */}
   <motion.div
-    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
+    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 cursor-pointer flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
     h-[calc(20rem)] md:h-[28rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[20rem] sm:h-[25rem] md:sm:h-[25rem] lg:sm:h-[25rem] xl:sm:h-[25rem] 2xl:sm:h-[25rem]"
     whileHover={{ scale: 1.05 }}
   >
@@ -333,7 +329,7 @@ const Hero = () => {
 
   {/* Testimonial 2 */}
   <motion.div
-    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
+    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 cursor-pointer flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
     h-[calc(20rem)] md:h-[28rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[20rem] sm:h-[25rem] md:sm:h-[25rem] lg:sm:h-[25rem] xl:sm:h-[25rem] 2xl:sm:h-[25rem]"
     whileHover={{ scale: 1.05 }}
   >
@@ -362,7 +358,7 @@ const Hero = () => {
 
   {/* Testimonial 3 */}
   <motion.div
-    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
+    className="bg-white text-black p-6 rounded-3xl shadow-lg w-full md:w-1/3 h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 cursor-pointer flex flex-col justify-between transition-transform duration-300 ease-in-out hover:scale-105 
     h-[calc(20rem)] md:h-[28rem] lg:h-[20rem] xl:h-[20rem] 2xl:h-[20rem] sm:h-[25rem] md:sm:h-[25rem] lg:sm:h-[25rem] xl:sm:h-[25rem] 2xl:sm:h-[25rem]"
     whileHover={{ scale: 1.05 }}
   >

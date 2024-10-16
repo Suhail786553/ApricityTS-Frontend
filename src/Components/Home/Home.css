@@ -1,7 +1,0 @@
-@media (min-width: 768px) and (max-width: 1000px) {
-    .image {
-      width: 90%; /* or any other width you want */
-      max-width: 700px; /* to prevent it from being too large */
-    }
-  }
-  

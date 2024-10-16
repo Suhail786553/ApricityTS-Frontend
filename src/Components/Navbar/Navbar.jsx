@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-// import { FaXTwitter } from "react-icons/fa6";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useLocation } from "react-router-dom"; // For tracking the current route
+import { RiAdminFill } from "react-icons/ri";
 import img from './img.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false); // State to manage tooltip visibility
 
   // This is to track the active link based on the URL path
   const location = useLocation();
@@ -17,10 +18,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 h-20 static ..." style={{
-      zIndex: '1', // This ensures the menu appears above the video
-      background: 'white', // Optional: semi-transparent background for the menu
-      // padding: '10px',
+    <nav className="bg-white shadow-lg sticky top-0 h-20" style={{
+      zIndex: '1',
+      background: 'white',
       width: '100%'
     }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,10 +33,7 @@ const Navbar = () => {
             />
           </div>
           <div className="hidden md:flex space-x-8 items-center">
-            <ul
-              className="flex space-x-6"
-              style={{ fontFamily: "Sans-Serif Noto-sans", fontSize: "16px" }}
-            >
+            <ul className="flex space-x-6" style={{ fontFamily: "Sans-Serif Noto-sans", fontSize: "16px" }}>
               <li className="relative group">
                 <a
                   href="/"
@@ -129,14 +126,18 @@ const Navbar = () => {
               >
                 <FaLinkedin />
               </a>
-              {/* <a
-                href="https://twitter.com"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaXTwitter />
-              </a> */}
+              <div className="relative" 
+                onMouseEnter={() => setShowTooltip(true)} 
+                onMouseLeave={() => setShowTooltip(false)}>
+                <a href="/owner" className="text-gray-800 hover:text-gray-500">
+                  <RiAdminFill />
+                </a>
+                {showTooltip && (
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-800 text-white text-sm px-2 py-1 rounded">
+                    Admin Login
+                  </span>
+                )}
+              </div>
             </div>
           </div>
           <div className="md:hidden">
@@ -208,9 +209,9 @@ const Navbar = () => {
               >
                 <FaLinkedin />
               </a>
-              {/* <a href="https://twitter.com" className="text-gray-800 hover:text-gray-500">
-                <FaXTwitter />
-              </a> */}
+              <a href="/owner" className="text-gray-800 hover:text-gray-500">
+                <RiAdminFill />
+              </a>
             </div>
           </ul>
         </div>

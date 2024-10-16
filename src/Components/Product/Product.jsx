@@ -3,9 +3,7 @@ import { motion } from "framer-motion";
 import imgocr1 from '../Navbar/imgocr1.png';
 
 const Product = () => {
-  const handleClick = () => {
-    alert("Coming Soon");
-  };
+ 
 
   return (
     <>
@@ -31,7 +29,7 @@ const Product = () => {
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+    <a href="/result" className="flex flex-col h-full">
       <img
         className="w-full h-40 object-cover"
         src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
@@ -53,7 +51,7 @@ const Product = () => {
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+    <a href="/result" className="flex flex-col h-full">
       <img
         className="w-full h-40 object-cover"
         src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
@@ -75,7 +73,7 @@ const Product = () => {
     whileHover={{ scale: 1.05, rotate: 3 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
-    <a href="#" onClick={handleClick} className="flex flex-col h-full">
+    <a href="/result"  className="flex flex-col h-full">
       <img
         className="w-full h-40 object-cover"
         src={imgocr1}
