@@ -67,7 +67,7 @@ const OCRComponent = () => {
         {/* Footer */}
         <div className="mt-8 flex justify-between items-center">
           <a
-            href="#"
+            href="/terms"
             className="text-sm underline"
           >
             Terms & Conditions

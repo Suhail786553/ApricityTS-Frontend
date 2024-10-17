@@ -12,7 +12,7 @@ import Result from './Components/Result/Result';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TryFree from "./Components/Result/TryFree";
-
+import Terms from "./Components/Result/Terms";
 const App = () => {
   return (
     <BrowserRouter>
@@ -28,6 +28,7 @@ const App = () => {
         <Route path="/owner" element={<Owner/>} />
         <Route path="/result" element={<Result/>} />
         <Route path="/tryfree" element={<TryFree/>} />
+        <Route path="/terms" element={<Terms/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
