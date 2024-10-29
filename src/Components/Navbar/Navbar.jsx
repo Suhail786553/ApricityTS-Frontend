@@ -1,20 +1,35 @@
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { useLocation } from "react-router-dom"; // For tracking the current route
 import { RiAdminFill } from "react-icons/ri";
 import img from './img.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showTooltip, setShowTooltip] = useState(false); // State to manage tooltip visibility
+  // const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
-  // This is to track the active link based on the URL path
   const location = useLocation();
   const currentPath = location.pathname;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    let timeoutId;
+  // Function to open dropdown
+  const handleDropdownMouseEnter = () => {
+    clearTimeout(timeoutId); // Clear any existing timer to prevent immediate closing
+    setIsDropdownOpen(true); // Open the dropdown when hovering
+  };
+
+
+  // Function to close dropdown
+  const handleDropdownMouseLeave = () => {
+    timeoutId = setTimeout(() => {
+      setIsDropdownOpen(false); // Close the dropdown after a delay
+    }, 300); // Delay time in milliseconds (300ms = 0.3 seconds)
   };
 
   return (
@@ -37,67 +52,113 @@ const Navbar = () => {
               <li className="relative group">
                 <a
                   href="/"
-                  className={`text-black-800 hover:text-purple-600 ${currentPath === "/" ? "underline-active" : ""
-                    }`}
+                  className={`text-black-800 hover:text-purple-600 ${currentPath === "/" ? "underline-active" : ""}`}
                 >
                   Home
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/" ? "scale-x-100" : "scale-x-0"
-                    }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/" ? "scale-x-100" : "scale-x-0"}`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/products"
-                  className={`text-purple-800 hover:text-black ${currentPath === "/products" ? "underline-active" : ""
-                    }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/products" ? "underline-active" : ""}`}
                   style={{ fontFamily: "sans-serif Noto-sans" }}
                 >
                   Products
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/products" ? "scale-x-100" : "scale-x-0"
-                    }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/products" ? "scale-x-100" : "scale-x-0"}`}
                 ></span>
+              </li>
+              <li
+                className="relative group"
+                onMouseEnter={handleDropdownMouseEnter}
+                onMouseLeave={handleDropdownMouseLeave}
+              >
+                <div
+                  className={`flex items-center text-purple-800 hover:text-black cursor-pointer ${currentPath === "/solutions" ? "underline-active" : ""}`}
+                >
+                  <span>Solutions</span>
+                  <FiChevronDown
+                    className={`ml-1 transition-transform duration-300 ${isDropdownOpen ? "transform rotate-180" : ""}`}
+                  />
+                </div>
+                <span
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-grey-800 transform transition-transform duration-300 ${currentPath === "/solutions" ? "scale-x-100" : "scale-x-0"}`}
+                ></span>
+                {isDropdownOpen && (
+                  <ul className="absolute top-full mt-2 w-32 bg-white shadow-lg rounded-md">
+                    <li>
+                      <a href="/legal" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        Legal
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/finance" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        Finance
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/government" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        Government
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/healthcare" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        Healthcare
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/insurance" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        Insurance
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/it" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        IT-Sector
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/retail" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                        Retail
+                      </a>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li className="relative group">
                 <a
                   href="/usecases"
-                  className={`text-purple-800 hover:text-black ${currentPath === "/usecases" ? "underline-active" : ""
-                    }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/usecases" ? "underline-active" : ""}`}
                 >
                   Use cases
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/usecases" ? "scale-x-100" : "scale-x-0"
-                    }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/usecases" ? "scale-x-100" : "scale-x-0"}`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/about"
-                  className={`text-purple-800 hover:text-black ${currentPath === "/about" ? "underline-active" : ""
-                    }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/about" ? "underline-active" : ""}`}
                 >
                   About
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/about" ? "scale-x-100" : "scale-x-0"
-                    }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/about" ? "scale-x-100" : "scale-x-0"}`}
                 ></span>
               </li>
               <li className="relative group">
                 <a
                   href="/contact"
-                  className={`text-purple-800 hover:text-black ${currentPath === "/contact" ? "underline-active" : ""
-                    }`}
+                  className={`text-purple-800 hover:text-black ${currentPath === "/contact" ? "underline-active" : ""}`}
                 >
                   Contact Us
                 </a>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/contact" ? "scale-x-100" : "scale-x-0"
-                    }`}
+                  className={`absolute left-0 bottom-0 w-full h-0.5 bg-gray-800 transform transition-transform duration-300 ${currentPath === "/contact" ? "scale-x-100" : "scale-x-0"}`}
                 ></span>
               </li>
             </ul>
@@ -159,18 +220,74 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a
-                href="/products"
-                className="text-gray-800 hover:text-gray-500"
-              >
+              <a href="/products" className="text-gray-800 hover:text-gray-500">
                 Products
               </a>
             </li>
             <li>
-              <a
-                href="/usecases"
-                className="text-gray-800 hover:text-gray-500"
-              >
+            <div className="relative">
+      {/* Solutions Button */}
+      <div
+        onMouseEnter={handleDropdownMouseEnter}
+        onMouseLeave={handleDropdownMouseLeave}
+        className="flex items-center cursor-pointer"
+      >
+        <span className="text-gray-800 hover:text-gray-500">Solutions</span>
+        <FiChevronDown
+          className={`ml-1 transition-transform duration-300 ${
+            isDropdownOpen ? "transform rotate-180" : ""
+          }`}
+        />
+      </div>
+
+      {/* Dropdown Options */}
+      {isDropdownOpen && (
+        <ul
+          onMouseEnter={handleDropdownMouseEnter} // Keep dropdown open when hovering over the dropdown
+          onMouseLeave={handleDropdownMouseLeave} // Close dropdown after delay when leaving
+          className="absolute left-0 mt-2 w-40 bg-white border shadow-md"
+        >
+          <li>
+            <a href="/legal" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              Legal
+            </a>
+          </li>
+          <li>
+            <a href="/finance" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              Finance
+            </a>
+          </li>
+          <li>
+            <a href="/government" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              Government
+            </a>
+          </li>
+          <li>
+            <a href="/healthcare" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              Healthcare
+            </a>
+          </li>
+          <li>
+            <a href="/insurance" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              Insurance
+            </a>
+          </li>
+          <li>
+            <a href="/it" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              IT-Sector
+            </a>
+          </li>
+          <li>
+            <a href="/retail" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+              Retail
+            </a>
+          </li>
+        </ul>
+      )}
+    </div>
+            </li>
+            <li>
+              <a href="/usecases" className="text-gray-800 hover:text-gray-500">
                 Use cases
               </a>
             </li>
@@ -184,35 +301,11 @@ const Navbar = () => {
                 Contact Us
               </a>
             </li>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebook />
-              </a>
-              <a
-                href="https://www.instagram.com/apricity_ts/profilecard/?igsh=cHY2bjBrd2k3MHdi"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/apricity-ts/"
-                className="text-gray-800 hover:text-gray-500"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
+            <li>
               <a href="/owner" className="text-gray-800 hover:text-gray-500">
-                <RiAdminFill />
+                <RiAdminFill /> Admin Login
               </a>
-            </div>
+            </li>
           </ul>
         </div>
       )}

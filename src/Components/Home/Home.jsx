@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaStar } from "react-icons/fa";
 import backgroundVideo from "../About/vid.mp4";
-import imgocr1 from '../Navbar/imgocr1.png';
+// import imgocr1 from '../Navbar/imgocr1.png';
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -28,9 +28,32 @@ const Hero = () => {
       };
     }
   }, [inView]);
-  const handleInput=()=>{
-    alert("coming soon");
-  }
+  // const handleInput=()=>{
+  //   alert("coming soon");
+  // }
+  const [selectedTab, setSelectedTab] = useState("Any OCR Engine");
+  const tabData = {
+    "Any OCR Engine": {
+      heading: "Any OCR Engine",
+      description: "Ayn OCR is our Arabic OCR engine designed for precise data extraction from images and scanned PDFs with exceptional accuracy.",
+      imageUrl: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
+    },
+    "Invoice Extractor": {
+      heading: "Invoice Extractor",
+      description: " Invoice Extractor leverages OCR and machine vision to accurately extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.",
+      imageUrl: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
+    },
+    "ID Card Detail Extractor": {
+      heading: "ID Card Detail Extractor",
+      description: " ID Card Extractor uses advanced technology to accurately extract information from ID card images. Powered by our Ayn OCR engine.",
+      imageUrl:"http://localhost:3000/src/Components/Navbar/imgocr1.png"
+    }
+  };
+
+  // Handle tab click
+  const handleTabClick = (tab) => {
+    setSelectedTab(tab);
+  };
   return (
     <>
       <div className="relative h-screen flex flex-col justify-center items-center text-center">
@@ -144,90 +167,62 @@ const Hero = () => {
 
       {/* The rest of your component */}
 
-      <div className="bg-black text-white py-16">
-        {/* Section Heading */}
-        <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-semibold mb-4">
-            Our Products
-          </h3>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto">
-            Accelerate business processes with our AI-driven solutions tailored
-            for the UAE and Gulf regions.
-          </p>
-        </div>
+      
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
-  {/* Card 1 */}
-  <motion.div
-    className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
-    style={{ minHeight: "400px" }}
-    whileHover={{ scale: 1.05, rotate: 3 }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    <a href="/result" className="flex flex-col h-full">
-      <img
-        className="w-full h-40 object-cover"
-        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/out1-YZ9bEoQQWZSE2gvJ.jpg"
-        alt="Product 1"
-      />
-      <div className="p-6 my-8 flex-grow"> {/* Increased padding here */}
-        <strong className="text-xl mb-2 block">Ayn OCR Engine</strong>
-        <p className="text-base line-clamp-3">
-          Ayn OCR is our Arabic OCR engine designed for precise data extraction from images and scanned PDFs with exceptional accuracy.
-        </p>
-      </div>
-    </a>
-  </motion.div>
+        <div className="bg-slate-100">
+        <div className="py-16">
+          {/* Section Heading */}
+          <div className="text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Products</h1>
+            <h5 className="text-xl md:text-2xl font-semibold mb-4">
+            Accelerate business processes with our AI-driven solutions tailored<br></br> for the UAE and Gulf regions.
+            </h5>
+          </div>
 
-  {/* Card 2 */}
-  <motion.div
-    className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
-    style={{ minHeight: "400px" }}
-    whileHover={{ scale: 1.05, rotate: 3 }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    <a href="#" onClick={handleInput}  className="flex flex-col h-full">
-      <img
-        className="w-full h-40 object-cover"
-        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=400,h=304,fit=crop/YZ9bEQRPa4i5BwKB/1_gax3-sipo09bpdcz2fi_kw-mjE94oG5Z6T9Dk45.webp"
-        alt="Product 2"
-      />
-      <div className="p-6 my-8 flex-grow"> {/* Increased padding here */}
-        <strong className="text-xl mb-2 block">Invoice Extractor</strong>
-        <p className="text-base line-clamp-3">
-          Invoice Extractor leverages OCR and machine vision to accurately extract invoice data from scanned PDFs, powered by our Ayn OCR Engine.
-        </p>
-      </div>
-    </a>
-  </motion.div>
+          {/* Tab Headings */}
+          <div className="flex justify-center space-x-12 text-lg md:text-xl mb-8">
+            {Object.keys(tabData).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => handleTabClick(tab)}
+                className={`pb-2 ${selectedTab === tab ? "border-b-2 border-purple-500" : ""}`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
 
-  {/* Card 3 */}
-  <motion.div
-    className="bg-white text-black rounded-3xl overflow-hidden shadow-lg max-w-xs md:max-w-sm flex flex-col"
-    style={{ minHeight: "400px" }}
-    whileHover={{ scale: 1.05, rotate: 3 }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    <a href="#" onClick={handleInput} className="flex flex-col h-full">
-      <img
-        className="w-full h-40 object-cover"
-        src={imgocr1}
-        alt="Product 3"
-      />
-      <div className="p-6 my-8 flex-grow"> {/* Increased padding here */}
-        <strong className="text-xl mb-2 block">ID Card Detail Extractor</strong>
-        <p className="text-base line-clamp-3">
-          ID Card Extractor uses advanced technology to accurately extract information from ID card images. Powered by our Ayn OCR engine.
-        </p>
-      </div>
-    </a>
-  </motion.div>
-</div>
+          {/* Tab Content */}
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-x-8">
+            {/* Text and Button Section */}
+            <div className="max-w-md text-center md:text-left">
+              <p className="text-lg md:text-xl mb-4">
+                {tabData[selectedTab].description}
+              </p>
+              <button
+                onClick={() => alert("Coming soon")}
+                className="bg-blue-500 text-white px-6 py-2 rounded-lg"
+              >
+                Try Now
+              </button>
+            </div>
 
-
-
+            {/* Image Section */}
+            <motion.div
+              className="max-w-md w-3/4"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img
+                className="w-full h-40 object-cover rounded-lg"style={{height:"30vh", borderRadius:"30px"}}
+                src={tabData[selectedTab].imageUrl}
+                alt={selectedTab}
+              />
+            </motion.div>
+          </div>
         </div>
+      </div>
       <div className="bg-[#904AF2] text-white py-16 px-4 text-center">
         {/* Star Rating */}
         <div className="flex justify-center mb-4">
