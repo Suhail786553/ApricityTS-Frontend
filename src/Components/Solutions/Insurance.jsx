@@ -90,14 +90,14 @@ class ExistingComponent extends Component {
         const faqs = [
             {
                 question:
-                    "How can Sanad's document processing solution improve efficiency in Accounts Payable (AP) and Accounts Receivable (AR)?",
+                    "How can ApricityTS document processing solution improve efficiency in Accounts Payable (AP) and Accounts Receivable (AR)?",
                 answer:
-                    "Sanad's AI-powered workflows automate the extraction, validation, and processing of invoices, receipts, and payment data, drastically reducing manual entry errors and processing time. This improves cash flow management in AR and ensures timely, accurate invoice handling in AP.",
+                    "ApricityTS AI-powered workflows automate the extraction, validation, and processing of invoices, receipts, and payment data, drastically reducing manual entry errors and processing time. This improves cash flow management in AR and ensures timely, accurate invoice handling in AP.",
             },
             {
-                question: "Can Sanad’s solution help with compliance and risk management in financial services?",
+                question: "Can ApricityTS solution help with compliance and risk management in financial services?",
                 answer:
-                    "Yes, Sanad’s solution provides thorough compliance checks and reduces risks associated with financial operations.",
+                    "Yes, ApricityTS solution provides thorough compliance checks and reduces risks associated with financial operations.",
             },
             {
                 question: "What types of financial documents can Sanad process?",
@@ -105,15 +105,15 @@ class ExistingComponent extends Component {
                     "Sanad can process invoices, receipts, purchase orders, and other financial documents used in business transactions.",
             },
             {
-                question: "How does Sanad’s fraud detection system work?",
+                question: "How does ApricityTS fraud detection system work?",
                 answer:
-                    "Sanad’s fraud detection system uses machine learning algorithms to analyze patterns and detect anomalies in financial documents, providing an extra layer of security.",
+                    "ApricityTS fraud detection system uses machine learning algorithms to analyze patterns and detect anomalies in financial documents, providing an extra layer of security.",
             },
             {
                 question:
-                    "Is Sanad’s document processing solution scalable for growing financial institutions?",
+                    "Is ApricityTS document processing solution scalable for growing financial institutions?",
                 answer:
-                    "Yes, Sanad’s solution is scalable and can be adapted to fit the growing needs of financial institutions, regardless of size.",
+                    "Yes, ApricityTS solution is scalable and can be adapted to fit the growing needs of financial institutions, regardless of size.",
             },
         ];
 

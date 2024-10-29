@@ -200,12 +200,11 @@ const Hero = () => {
               <p className="text-lg md:text-xl mb-4">
                 {tabData[selectedTab].description}
               </p>
-              <button
-                onClick={() => alert("Coming soon")}
+              <a href="/result"><button
                 className="bg-blue-500 text-white px-6 py-2 rounded-lg"
               >
                 Try Now
-              </button>
+              </button></a>
             </div>
 
             {/* Image Section */}
