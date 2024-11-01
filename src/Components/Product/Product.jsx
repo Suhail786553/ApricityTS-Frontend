@@ -32,58 +32,60 @@ const Product = () => {
 
   return (
     <>
-      <div>
-        <div className="py-16">
-          {/* Section Heading */}
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Products</h1>
-            <h5 className="text-xl md:text-2xl font-semibold mb-4">
-            Accelerate business processes with our AI-driven solutions tailored<br></br> for the UAE and Gulf regions.
-            </h5>
-          </div>
+      <div className="py-16 px-4 md:px-17 lg:px-24">
+  {/* Section Heading */}
+  <div className="mb-12">
+    {/* <h2 className="text-3xl md:text-3xl font-semibold mb-4 text-left">Our Products</h2> */}
+    <h6 className="text-3xl md:text-3xl font-semibold mb-4 text-left">
+      Accelerate business processes with our AI-driven solutions tailored<br /> for the UAE and Gulf regions.
+    </h6>
+  </div>
 
-          {/* Tab Headings */}
-          <div className="flex justify-center space-x-12 text-lg md:text-xl mb-8">
-            {Object.keys(tabData).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => handleTabClick(tab)}
-                className={`pb-2 ${selectedTab === tab ? "border-b-2 border-purple-500" : ""}`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
+  {/* Tab Headings */}
+  <div className="flex items-center space-x-4 text-lg md:text-xl mb-8">
+  {Object.keys(tabData).map((tab) => (
+    <button
+      key={tab}
+      onClick={() => handleTabClick(tab)}
+      className={`pb-2 ${selectedTab === tab ? "text-purple-500 border-b-2 border-purple-500" : ""} text-left`}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
 
-          {/* Tab Content */}
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-x-8">
-            {/* Text and Button Section */}
-            <div className="max-w-md text-center md:text-left">
-              <p className="text-lg md:text-xl mb-4">
-                {tabData[selectedTab].description}
-              </p>
-              <a href="/result"><button
-                className="bg-blue-500 text-white px-6 py-2 rounded-lg"
-              >
-                Try Now
-              </button></a>
-            </div>
 
-            {/* Image Section */}
-            <motion.div
-              className="max-w-md w-3/4"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <img
-                className="w-full h-40 object-cover rounded-lg"style={{height:"30vh", borderRadius:"30px"}}
-                src={tabData[selectedTab].imageUrl}
-                alt={selectedTab}
-              />
-            </motion.div>
-          </div>
-        </div>
-      </div>
+  {/* Tab Content */}
+  <div className="flex flex-col md:flex-row items-start justify-between md:space-x-12">
+    {/* Text and Button Section */}
+    <div className="max-w-md text-left">
+      <p className="text-lg md:text-xl mb-4">
+        {tabData[selectedTab].description}
+      </p>
+      <a href="/result">
+        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
+          Try Now
+        </button>
+      </a>
+    </div>
+
+    {/* Image Section */}
+    <motion.div
+      className="max-w-md w-full md:w-1/2 mt-8 md:mt-0"
+      style={{ marginRight: "1rem" }} // Adjust this value for exact spacing from the right corner
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <img
+        className="w-full object-cover rounded-lg"
+        style={{ height: "30vh", borderRadius: "30px" }}
+        src={tabData[selectedTab].imageUrl}
+        alt={selectedTab}
+      />
+    </motion.div>
+  </div>
+</div>
+
       <div className="bg-white py-16 flex justify-center items-center">
         <div className="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto">
           {/* Left Div (Image) */}

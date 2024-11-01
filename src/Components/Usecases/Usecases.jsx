@@ -1,6 +1,4 @@
 import Slider from "react-slick";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -123,70 +121,6 @@ const AiSolutionsSection = () => {
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="bg-[rgb(13,27,43)] text-white py-12 px-8 md:flex md:justify-between">
-        <div className="md:w-1/2 flex flex-col justify-center text-center md:text-left">
-          <h1 className="text-[48px] md:text-[64px] font-[sans-serif noto-sans] font-semibold">
-            Predict the future by creating it
-          </h1>
-          <p className="text-[16px] md:text-[18px] mt-4">
-            You didn’t come this far to stop
-          </p>
-          <div className="flex items-center space-x-4 mt-4 justify-center md:justify-start">
-            <button className="bg-[#176BE0] text-white py-2 px-4 md:w-1/4 h-12 rounded-full cursor-pointer">
-              Create it
-            </button>
-            <a
-              href="https://www.instagram.com/"
-              className="text-white-800 hover:text-white-500 cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ fontSize: "20px", marginTop: "4px" }}
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com/feed/"
-              className="text-white-800 hover:text-white-500 cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ fontSize: "20px", marginTop: "4px" }}
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="mailto:someone@example.com"
-              className="text-white-800 hover:text-white-500 cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ fontSize: "20px", marginTop: "4px" }}
-            >
-              <MdOutlineEmail />
-            </a>
-          </div>
-        </div>
-
-        {/* Right Content */}
-        <div className="md:w-1/2 flex flex-row space-x-4 mt-8 md:flex-row items-center md:space-x-4 mt-8 md:mt-0">
-          <img
-            src="https://images.unsplash.com/photo-1526495124232-a04e1849168c?auto=format&fit=crop&w=720&h=1367"
-            alt="First"
-            className="w-full md:w-1/2 h-[300px] md:h-[420px] rounded-lg cursor-pointer"
-          />
-          <div className="flex flex-col w-full md:w-1/2 space-y-4">
-            <img
-              src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=720&h=656"
-              alt="Second"
-              className="w-full h-[140px] md:h-[200px] rounded-lg cursor-pointer"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=720&h=656"
-              alt="Third"
-              className="w-full h-[140px] md:h-[200px] rounded-lg cursor-pointer"
-            />
-          </div>
-        </div>
-      </section>
     </>
   );
 };
