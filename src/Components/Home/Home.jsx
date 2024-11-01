@@ -75,18 +75,18 @@ const Hero = () => {
       <p className="text-lg md:text-xl  font-medium">
         Driving growth, enhancing visibility and delivering results across the <span className="text-blue-300">Middle East</span>
       </p>
-      <div className="flex items-center justify-center md:justify-start space-x-4">
+      <div className="flex items-center justify-center bg-white rounded-xl md:justify-start space-x-4">
         <img src="https://mirakidigital.ai/assets/images/facebook.png" alt="Facebook Partner" className="h-10" />
         <img src="https://mirakidigital.ai/assets/images/hubspot.png" alt="Google Partner" className="h-10" />
         <img src="https://mirakidigital.ai/assets/images/glogo.png" alt="HubSpot Partner" className="h-10" />
       </div>
-      <a href="tel:+971585868611" className="bg-blue-500 text-white px-4 py-2 rounded-full text-lg inline-block mt-4 md:mt-6 hover:bg-green-600">
+      <a href="tel:+971585868611" className="bg-blue-500 text-white px-4 py-2 rounded-full text-lg inline-block mt-4 md:mt-6 hover:bg-blue-600">
         +971585868611
       </a>
     </div>
 
     {/* Right Section - Contact Form */}
-    <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-md w-full mt-10 md:mt-0 mx-12">
+     <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-md w-full mt-10 md:mt-0 mx-12">
       <h2 className="text-2xl font-semibold text-blue-600 mb-4">Connect with our digital expert</h2>
       <p className="text-gray-600 mb-6">
         Please fill out the request form below and our experts will contact you shortly.
@@ -103,13 +103,13 @@ const Hero = () => {
         <select className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
           <option>Select Services</option>
           {/* Add more options here */}
-        </select>
+         </select>
         <textarea placeholder="Brief us your requirement" className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3"></textarea>
-        <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+        <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-2xl hover:bg-blue-600">
           SUBMIT
         </button>
       </form>
-    </div>
+    </div> 
   </div>
 </div>
 
