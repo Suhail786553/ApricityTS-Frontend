@@ -23,7 +23,7 @@ const ContactForm = () => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     try {
-      const response = await fetch("https://ocr-3-7zyy.onrender.com/api/about", {
+      const response = await fetch("http://localhost:5000/api/about", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

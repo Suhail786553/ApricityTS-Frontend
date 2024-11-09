@@ -8,13 +8,19 @@ class ExistingComponent extends Component {
             activeIndex: null, // Track the open/active FAQ
         };
     }
-
     // Method to toggle which FAQ is open
     toggleFAQ = (index) => {
         this.setState((prevState) => ({
             activeIndex: prevState.activeIndex === index ? null : index,
         }));
     };
+    componentDidMount() {
+        // Trigger the animation on component mount
+        setTimeout(() => {
+            this.setState({ animate: true });
+          }, 100); // 100ms delay
+      }
+    
 
     render() {
         // Documents data
@@ -125,38 +131,49 @@ class ExistingComponent extends Component {
             },
         ];
 
+  
+
         return (
+            
             <div>
                 {/* Existing JSX content of your component */}
                 <div>
                     {/* First Section - Legal Document Automation */}
                     <div className="min-h-screen bg-[rgb(144,74,242)] flex items-center justify-center">
-                        {/* Container */}
-                        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
-                            {/* Left Section - Content */}
-                            <div className="text-white flex flex-col justify-center">
-                                <h1 className="text-4xl font-bold mb-4 text-[#4ADE80]">
-                                    Automated word processing software for legal documents
-                                </h1>
-                                <p className="text-lg mb-4">
-                                    Free up your most talented people with automated data extraction and optimize legal workflows. Use advanced AI to save time and resources in all aspects of document handling whether in Arabic or English.
-                                </p>
-                                <p className="text-lg font-bold mb-6">You can Try it for Free</p>
-                                <button className="bg-green-400 h-12 w-52 hover:bg-green-500 text-black font-semibold py-2 px-6 rounded-lg">
-                                    Contact us Today!
-                                </button>
-                            </div>
+        {/* Container */}
+        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
+          {/* Left Section - Content */}
+          <div
+            className={`text-white flex flex-col justify-center transform transition-transform duration-1000 ${
+              this.state.animate ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0'
+            }`}
+          >
+            <h1 className="text-4xl font-bold mb-4 text-[#4ADE80]">
+              Automated word processing software for legal documents
+            </h1>
+            <p className="text-lg mb-4">
+              Free up your most talented people with automated data extraction and optimize legal workflows. Use advanced AI to save time and resources in all aspects of document handling whether in Arabic or English.
+            </p>
+            <p className="text-lg font-bold mb-6">You can Try it for Free</p>
+            <button className="bg-green-400 h-12 w-52 hover:bg-green-500 text-black font-semibold py-2 px-6 rounded-lg">
+              Contact us Today!
+            </button>
+          </div>
 
-                            {/* Right Section - Image */}
-                            <div className="flex justify-center">
-                                <img
-                                    src="https://sanad.ai/wp-content/uploads/2023/12/Cloud-White.png"
-                                    alt="Cloud"
-                                    className="w-76 h-76 object-contain"
-                                />
-                            </div>
-                        </div>
-                    </div>
+          {/* Right Section - Image */}
+          <div
+            className={`flex justify-center transform transition-transform duration-1000 delay-200 ${
+              this.state.animate ? 'translate-y-0 opacity-100' : '-translate-y-20 opacity-0'
+            }`}
+          >
+            <img
+              src="https://sanad.ai/wp-content/uploads/2023/12/Cloud-White.png"
+              alt="Cloud"
+              className="w-76 h-76 object-contain"
+            />
+          </div>
+        </div>
+      </div>
 
                     {/* Second Section - What ApricityTS Can Do */}
                     <div className="bg-gray-50 py-16">
@@ -283,169 +300,136 @@ class ExistingComponent extends Component {
                     </div>
                     {/* content of image and other left right */}
                     <div className="bg-gray-50 py-16 px-4 lg:px-8">
-                        <h2 className="text-center text-4xl font-bold text-[#904AF2] mb-12" style={{ fontWeight: "700" }}>
-                            Which Legal Departments Stand to Benefit the Most?
-                        </h2>
+      <h2 className="text-center text-4xl font-bold text-[#904AF2] mb-12" style={{ fontWeight: "700" }}>
+        Which Legal Departments Stand to Benefit the Most?
+      </h2>
 
-                        {/* Department Card */}
-                        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Department Sections */}
+      <div className="max-w-7xl mx-auto space-y-12">
+        
+        {/* Section 1: Contract Management */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <div>
+            <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Contract Management</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Automate the review process highlighting key terms and clauses.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Track and manage contract renewals and deadlines automatically.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Quickly extract and categorize clauses from contracts.
+              </li>
+            </ul>
+          </div>
+          {/* Image */}
+          <div className="flex justify-center lg:order-last">
+            <img
+              src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg"
+              alt="Contract Management"
+              className="w-full h-auto max-w-md rounded-lg shadow-md"
+            />
+          </div>
+        </div>
 
-                            {/* Left Content: Contract Management */}
-                            <div>
-                                <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Contract Management</h3>
-                                <ul className="space-y-3">
-                                    <li className="text-gray-600 text-lg flex items-start">
-                                        <span className="text-green-600 mr-2">✔</span>
-                                        Automate the review process highlighting key terms and clauses.
-                                    </li>
-                                    <li className="text-gray-600 text-lg flex items-start">
-                                        <span className="text-green-600 mr-2">✔</span>
-                                        Track and manage contract renewals and deadlines automatically.
-                                    </li>
-                                    <li className="text-gray-600 text-lg flex items-start">
-                                        <span className="text-green-600 mr-2">✔</span>
-                                        Quickly extract and categorize clauses from contracts.
-                                    </li>
-                                </ul>
-                            </div>
+        {/* Section 2: Litigation and Case Management */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Litigation and Case Management</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Manage and organize vast amounts of case documents.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Drive efficiency in the discovery phase.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Rapid retrieval of specific case files and related documentation.
+              </li>
+            </ul>
+          </div>
+          <div className="flex justify-center lg:order-last">
+            <img
+              src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg"
+              alt="Litigation and Case Management"
+              className="w-full h-auto max-w-md rounded-lg shadow-md"
+            />
+          </div>
+        </div>
 
-                            {/* Right Image */}
-                            <div className="flex justify-center">
-                                <img
-                                    src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg" // Replace with the actual path to your image
-                                    alt="Contract Management"
-                                    className="w-full h-auto max-w-md rounded-lg shadow-md"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            {/* 2nd content */}
-                            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                <div className="flex justify-center">
-                                    <img
-                                        src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg" // Replace with the actual path to your image
-                                        alt="Contract Management"
-                                        className="w-full h-auto max-w-md rounded-lg shadow-md"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Litigation and Case Management</h3>
-                                    <ul className="space-y-3">
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Manage and organize vast amounts of case documents.
-                                        </li>
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Drive efficiency in the discovery phase.
-                                        </li>
-                                        <li className="text-gray-800 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Rapid retrieval of specific case files and related documentation.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {/* 3 content */}
-                            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Section 3: Intellectual Property Management */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Intellectual Property Management</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Streamline the process of patent filing and renewals.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Automated tracking of intellectual property deadlines.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Secure storage and organization of IP documents.
+              </li>
+            </ul>
+          </div>
+          <div className="flex justify-center lg:order-last">
+            <img
+              src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg"
+              alt="Intellectual Property Management"
+              className="w-full h-auto max-w-md rounded-lg shadow-md"
+            />
+          </div>
+        </div>
 
-                                {/* Left Content: Contract Management */}
-                                <div>
-                                    <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Contract Management</h3>
-                                    <ul className="space-y-3">
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Automate the review process highlighting key terms and clauses.
-                                        </li>
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Track and manage contract renewals and deadlines automatically.
-                                        </li>
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Quickly extract and categorize clauses from contracts.
-                                        </li>
-                                    </ul>
-                                </div>
+        {/* Section 4: Compliance and Risk Management */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Compliance and Risk Management</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Ensure compliance with regulatory standards.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Automate risk assessment and management.
+              </li>
+              <li className="text-gray-600 text-lg flex items-start">
+                <span className="text-green-600 mr-2">✔</span>
+                Centralized tracking of compliance tasks and audits.
+              </li>
+            </ul>
+          </div>
+          <div className="flex justify-center lg:order-last">
+            <img
+              src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg"
+              alt="Compliance and Risk Management"
+              className="w-full h-auto max-w-md rounded-lg shadow-md"
+            />
+          </div>
+        </div>
 
-                                {/* Right Image */}
-                                <div className="flex justify-center">
-                                    <img
-                                        src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg" // Replace with the actual path to your image
-                                        alt="Contract Management"
-                                        className="w-full h-auto max-w-md rounded-lg shadow-md"
-                                    />
-                                </div>
-                            </div>
-                            <div></div>
-                            {/* 4 content */}
-                            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                                <div className="flex justify-center">
-                                    <img
-                                        src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg" // Replace with the actual path to your image
-                                        alt="Contract Management"
-                                        className="w-full h-auto max-w-md rounded-lg shadow-md"
-                                    />
-                                </div>
-                                <div>
-                                    <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Contract Management</h3>
-                                    <ul className="space-y-3">
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Automate the review process highlighting key terms and clauses.
-                                        </li >
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Track and manage contract renewals and deadlines automatically.
-                                        </li>
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Quickly extract and categorize clauses from contracts.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            {/* 5 content */}
-                            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      </div>
 
-                                {/* Left Content: Contract Management */}
-                                <div>
-                                    <h3 className="text-3xl font-semibold text-[#904AF2] mb-4">Contract Management</h3>
-                                    <ul className="space-y-3">
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Automate the review process highlighting key terms and clauses.
-                                        </li>
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Track and manage contract renewals and deadlines automatically.
-                                        </li>
-                                        <li className="text-gray-600 text-lg flex items-start">
-                                            <span className="text-green-600 mr-2">✔</span>
-                                            Quickly extract and categorize clauses from contracts.
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                {/* Right Image */}
-                                <div className="flex justify-center">
-                                    <img
-                                        src="https://sanad.ai/wp-content/uploads/2023/12/ID-1.jpg" // Replace with the actual path to your image
-                                        alt="Contract Management"
-                                        className="w-full h-auto max-w-md rounded-lg shadow-md"
-                                    />
-                                </div>
-                            </div>
-                            <div></div>
-
-                        </div>
-                        {/* CTA Button */}
-                        <div className="text-center mt-12">
-                            <button className="bg-[#904AF2] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#904AF2] transition-colors">
-                                Book a Demo
-                            </button>
-                        </div>
-                    </div>
+      {/* CTA Button */}
+      <div className="text-center mt-12">
+        <button className="bg-[#904AF2] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#904AF2] transition-colors">
+          Book a Demo
+        </button>
+      </div>
+    </div>
                     {/* // sanad features */}
                     <div className="max-w-6xl mx-auto px-4 py-16">
                         <h2 className="text-center text-4xl font-bold mb-10 text-[#904AF2]">Why Choose ApricityTS for Legal Sector?</h2>
