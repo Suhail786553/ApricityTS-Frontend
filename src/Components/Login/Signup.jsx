@@ -188,6 +188,15 @@ const SignUpForm = () => {
               Login with Facebook
             </button>
           </div>
+          <p className="mt-6 text-center text-sm text-gray-600">
+        Already have an account?{" "}
+        <a
+          href="/login"
+          className="text-[#904af2] hover:text-[#7a3ccd] transition font-semibold"
+        >
+          Login
+        </a>
+      </p>
         </motion.div>
       </div>
     </div>
