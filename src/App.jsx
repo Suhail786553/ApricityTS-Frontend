@@ -21,6 +21,8 @@ import Retail from './Components/Solutions/Retail';
 import Signup from './Components/Login/Signup';
 import Login from './Components/Login/Login';
 import DashboardPage from './Components/Dashboard/Dashboard'; // Assuming DashboardPage is imported
+import APIPage from "./Components/Dashboard/APIPage";
+import SettingsPage from "./Components/Dashboard/SettingsPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -54,6 +56,8 @@ const App = () => {
         <Route path="/retail" element={<Retail />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/api" element={<APIPage />} />
+        <Route path="/settings" element={<SettingsPage />} />
         
         {/* Use PrivateRoute for protected routes */}
         <Route 
