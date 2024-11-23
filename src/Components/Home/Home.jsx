@@ -49,7 +49,7 @@ const Hero = () => {
     "ID Card Detail Extractor": {
       heading: "ID Card Detail Extractor",
       description: " ID Card Extractor uses advanced technology to accurately extract information from ID card images. Powered by our Ayn OCR engine.",
-      imageUrl: "http://localhost:3000/src/Components/Navbar/imgocr1.png"
+      imageUrl: "https://user-images.githubusercontent.com/47300390/160568107-0ac52940-797e-4a00-9702-610d8e4f305c.jpg"
     }
   };
 
