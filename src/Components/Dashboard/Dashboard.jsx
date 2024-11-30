@@ -5,10 +5,23 @@ import { FaBars, FaTachometerAlt, FaCogs, FaSignOutAlt, FaCode } from "react-ico
 const DashboardPage = () => {
   const [user, setUser] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
   useEffect(() => {
-    // Fetch user data from localStorage
-    const userData = JSON.parse(localStorage.getItem("user"));
-    setUser(userData); // Update state with user data
+    // Fetch user data from query params or localStorage
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const email = params.get("email");
+    const token = params.get("token");
+
+    if (token && name && email) {
+      const userData = { name, email };
+      localStorage.setItem("user", JSON.stringify(userData));
+      localStorage.setItem("token", token);
+      setUser(userData);
+    } else {
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+      if (storedUser) setUser(storedUser);
+    }
   }, []);
 
   const handleLogout = () => {
@@ -71,7 +84,7 @@ const DashboardPage = () => {
           <h2 className="text-2xl font-semibold text-gray-800">
             Welcome, {user.name}!
           </h2>
-          <p className="text-gray-800">Email:{user.email}</p>
+          <p className="text-gray-800">Email: {user.email}</p>
         </div>
 
         {/* OCR Features Section */}
