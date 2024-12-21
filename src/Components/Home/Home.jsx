@@ -75,11 +75,11 @@ const Hero = () => {
       <p className="text-lg md:text-xl  font-medium">
         Driving growth, enhancing visibility and delivering results across the <span className="text-blue-300">Middle East</span>
       </p>
-      <div className="flex items-center justify-center bg-white rounded-xl md:justify-start space-x-4">
+      {/* <div className="flex items-center justify-center bg-white rounded-xl md:justify-start space-x-4">
         <img src="https://mirakidigital.ai/assets/images/facebook.png" alt="Facebook Partner" className="h-10" />
         <img src="https://mirakidigital.ai/assets/images/hubspot.png" alt="Google Partner" className="h-10" />
         <img src="https://mirakidigital.ai/assets/images/glogo.png" alt="HubSpot Partner" className="h-10" />
-      </div>
+      </div> */}
       <a href="tel:+971585868611" className="bg-blue-500 text-white px-4 py-2 rounded-full text-lg inline-block mt-4 md:mt-6 hover:bg-blue-600">
         +971585868611
       </a>

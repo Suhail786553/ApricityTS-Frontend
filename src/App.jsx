@@ -23,6 +23,7 @@ import Login from "./Components/Login/Login";
 import DashboardPage from "./Components/Dashboard/Dashboard";
 import APIPage from "./Components/Dashboard/APIPage";
 import SettingsPage from "./Components/Dashboard/SettingsPage";
+import Fashion from './Components/Fashion/Fashion';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -78,7 +79,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/api" element={<APIPage />} />
           <Route path="/settings" element={<SettingsPage />} />
-          
+          <Route path="/fashion" element={<Fashion />} />
+
           {/* Use PrivateRoute for protected routes */}
           <Route
             path="/dashboard"

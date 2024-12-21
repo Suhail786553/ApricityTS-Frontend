@@ -214,6 +214,7 @@ const SignUpForm = () => {
       alert("Signup successful");
       navigate("/dashboard");
     } catch (error) {
+      
       alert(error.response?.data?.message || "Signup failed!");
     }
   };

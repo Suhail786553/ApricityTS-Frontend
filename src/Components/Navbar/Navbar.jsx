@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 h-20" style={{ zIndex: 1 }}>
+    <nav className="bg-white shadow-lg sticky top-0 h-20" style={{ zIndex:50 }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 py-10">
           {/* Logo */}
@@ -70,6 +70,9 @@ const Navbar = () => {
               </li>
               <li className={`relative group ${currentPath === "/contact" ? "underline-active" : ""}`}>
                 <a href="/contact" className="text-purple-800 hover:text-black">Contact Us</a>
+              </li>
+              <li className={`relative group ${currentPath === "/contact" ? "underline-active" : ""}`}>
+                <a href="/fashion" className="text-purple-800 hover:text-black">FashionAI</a>
               </li>
             </ul>
 
@@ -134,6 +137,7 @@ const Navbar = () => {
             <li><a href="/usecases" className="text-gray-800 hover:text-gray-500">Use cases</a></li>
             <li><a href="/about" className="text-gray-800 hover:text-gray-500">About</a></li>
             <li><a href="/contact" className="text-gray-800 hover:text-gray-500">Contact Us</a></li>
+            <li><a href="/fashion" className="text-gray-800 hover:text-gray-500">FashionAI</a></li>
             <a href="/login" className="px-4 py-2 border border-purple-600 text-purple-600 rounded hover:bg-purple-600 hover:text-white transition">
                 Login
               </a>
