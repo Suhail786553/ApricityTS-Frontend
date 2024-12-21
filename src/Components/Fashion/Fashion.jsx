@@ -296,9 +296,9 @@ const HeroSection = () => {
     <section>
     <div className="bg-gray-100 min-h-screen flex flex-col items-center p-6">
       {/* Pricing Header */}
-      <h2 className="text-4xl font-bold mb-6 text-center">Pricing Plans</h2>
+      <h2 className="text-4xl font-bold mb-6 text-center">Choose the right plan for you</h2>
       <p className="text-gray-600 text-center mb-8">
-        Choose the plan that fits your needs.
+      Our flexible plans are designed to meet all your fashion needs. Explore options that suit<br></br> your pace and budget. Each outfit change consumes one credit.
       </p>
 
       {/* Toggle Button */}
