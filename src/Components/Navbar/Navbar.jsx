@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+// import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { useLocation } from "react-router-dom";
 import { RiAdminFill } from "react-icons/ri";
@@ -78,9 +78,9 @@ const Navbar = () => {
 
             {/* Social and Admin Links */}
             <div className="flex items-center space-x-4 text-xl">
-              <a href="#" className="text-gray-800 hover:text-gray-500"><FaFacebook /></a>
-              <a href="https://www.instagram.com/apricity_ts/" className="text-gray-800 hover:text-gray-500"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/company/apricity-ts/" className="text-gray-800 hover:text-gray-500"><FaLinkedin /></a>
+              {/* <a href="#" className="text-gray-800 hover:text-gray-500"><FaFacebook /></a>
+              <a href="https://www.instagram.com/apricity_ts/" className="text-gray-800 hover:text-gray-500"><FaInstagram /></a> */}
+              {/* <a href="https://www.linkedin.com/company/apricity-ts/" className="text-gray-800 hover:text-gray-500"><FaLinkedin /></a> */}
               <div className="relative" onMouseEnter={() => setShowTooltip(true)} onMouseLeave={() => setShowTooltip(false)}>
                 <a href="/owner" className="text-gray-800 hover:text-gray-500"><RiAdminFill /></a>
                 {showTooltip && (
