@@ -25,7 +25,7 @@ const BackupPage = () => {
       // Dynamically select the base URL
       const baseURL = window.location.hostname === "localhost"
         ? "http://localhost:5000/api/backup"
-        : "https://ocr-new.netlify.app/api/backup";
+        : "https://apricityts-backend.onrender.com/api/backup";
   
       const response = await fetch(baseURL, {
         headers: {
