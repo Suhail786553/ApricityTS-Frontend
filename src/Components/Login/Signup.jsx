@@ -39,7 +39,7 @@ const SignUpForm = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/signup","https://apricityts-backend.onrender.com/auth/signup",{ name, email, password });
+      const response = await axios.post("http://localhost:5000/api/auth/signup","https://apricityts-backend.onrender.com/api/auth/signup",{ name, email, password });
       const { token, user } = response.data;
 
       localStorage.setItem("token", token);
@@ -68,7 +68,7 @@ const SignUpForm = () => {
     try {
       const baseURL = window.location.hostname === "localhost"
       ? "http://localhost:5000/api/auth/sendOtp"
-      : "https://apricityts-backend.onrender.com/auth/sendOtp";
+      : "https://apricityts-backend.onrender.com/api/auth/sendOtp";
 
     // Make the POST request
     const response = await axios.post(baseURL, { email });
@@ -92,7 +92,7 @@ const SignUpForm = () => {
     try {
       const baseURL=window.location.hostname==="localhost"
       ?"http://localhost:5000/api/auth/verifyOtp"
-      :"https://apricityts-backend.onrender.com/auth/verifyOtp"
+      :"https://apricityts-backend.onrender.com/api/auth/verifyOtp"
       const response = await axios.post(baseURL,{ email, otp });
       console.log("Response:", response);  // Check the full response from the backend
   
