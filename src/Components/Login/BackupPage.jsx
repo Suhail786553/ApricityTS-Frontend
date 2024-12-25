@@ -18,16 +18,20 @@ const BackupPage = () => {
       fetchFormData();
     }
   }, [navigate]);
-
+  //fetch data
   const fetchFormData = async () => {
     try {
       setLoading(true);
-      const response = await fetch("http://localhost:5000/api/backup", {
+      // Dynamically select the base URL
+      const baseURL = window.location.hostname === "localhost"
+        ? "http://localhost:5000/api/backup"
+        : "https://ocr-new.netlify.app/api/backup";
+  
+      const response = await fetch(baseURL, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("authToken")}`, // Dynamically get token
         },
       });
-
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }

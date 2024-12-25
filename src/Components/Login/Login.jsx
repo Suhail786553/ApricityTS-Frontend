@@ -214,7 +214,7 @@ const LoginPage = () => {
       await signInWithEmailAndPassword(auth, loginData.email, loginData.password);
 
       // Simulate server login and retrieve token (optional)
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("http://localhost:5000/api/auth/login","https://ocr-new.netlify.app/auth/login", {
         email: loginData.email,
       });
 
