@@ -68,7 +68,7 @@ const SignUpForm = () => {
     try {
       const baseURL = window.location.hostname === "localhost"
       ? "http://localhost:5000/api/auth/sendOtp"
-      : "https://apricityts-backend.onrender.comapi/auth/sendOtp";
+      : "https://apricityts-backend.onrender.com/auth/sendOtp";
 
     // Make the POST request
     const response = await axios.post(baseURL, { email });
