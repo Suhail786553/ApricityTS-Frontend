@@ -40,8 +40,8 @@ const SignUpForm = () => {
 
     try {
       const baseURL = window.location.hostname === "localhost"
-      ? "http://localhost:5000/api/auth/signup"
-      : "https://apricityts-backend.onrender.com/api/auth/signup";
+    ? "http://localhost:5000/api/auth/signup" // Local development URL
+    : "https://apricityts-backend.onrender.com/api/auth/signup"; // Hosted backend URL
 
       const response = await axios.post(baseURL,{ name, email, password });
       const { token, user } = response.data;
