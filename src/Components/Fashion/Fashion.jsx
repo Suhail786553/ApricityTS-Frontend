@@ -6,8 +6,6 @@ import './Fashion.css';
 
 const HeroSection = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-  // const [freeClicks, setFreeClicks] = useState(0);
-  // const [showLimitMessage, setShowLimitMessage] = useState(false);
   const [isMonthly, setIsMonthly] = useState(true);
   const [activeIndex, setActiveIndex] = useState(null);
   const ref1 = useRef(null);
@@ -112,7 +110,7 @@ const HeroSection = () => {
           >
             Say goodbye to costly photoshoots. Create
             stunning, customizable <br></br>AI models and showcase your
-            garments e ortlessly
+            garments
           </motion.p>
           <a href="/modelgen"><motion.button
             whileHover={{ scale: 1.05 }}
@@ -161,129 +159,121 @@ const HeroSection = () => {
       </section>
       {/* section1 */}
       <section
-        ref={ref2}
-        className="relative bg-white py-16 px-6 lg:px-24 overflow-hidden"
-      >
-        {/* Background Gradient Accent */}
-        <div className="absolute -top-20 -left-20 w-96 h-96  rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full filter blur-3xl animate-pulse"></div>
+  ref={ref2}
+  className="relative bg-white py-16 px-6 lg:px-24 overflow-hidden"
+>
+  {/* Background Gradient Accent */}
+  <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full filter blur-3xl animate-pulse"></div>
+  <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full filter blur-3xl animate-pulse"></div>
 
-        {/* Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-          {/* Left Section: Content */}
-          <div className="flex flex-col space-y-6 lg:space-y-8 text-center lg:text-left">
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight animate-fade-in">
-              The Challenges of Traditional Fashion
-              Photography
-            </h1>
-            <p className="text-lg text-gray-700 animate-fade-in-delay">
-              Expensive model hiring and photoshoots.
-              Time-consuming processes for selecting models,
-              locations, and photographers.
-              Limited flexibility for customization and quick updates
-            </p>
-            <ul className="space-y-4 text-gray-700">
+  {/* Container */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+    {/* Left Section: Content */}
+    <div className="flex flex-col space-y-6 lg:space-y-8 text-center lg:text-left">
+      <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight animate-fade-in">
+        The Challenges of Traditional Fashion Photography
+      </h1>
+      <p className="text-lg text-gray-700 animate-fade-in-delay">
+        Expensive model hiring and photoshoots. Time-consuming processes for
+        selecting models, locations, and photographers. Limited flexibility for
+        customization and quick updates
+      </p>
+      <ul className="space-y-4 text-gray-700">
         <li className="flex items-start">
           <span className="text-purple-600 text-xl font-bold mr-3">•</span>
           <p>Expensive costs for hiring models, photographers, and renting locations.</p>
         </li>
         <li className="flex items-start">
-          <span className="text-purple-600 text-xl  font-bold mr-3">•</span>
+          <span className="text-purple-600 text-xl font-bold mr-3">•</span>
           <p>Time-consuming processes for organizing shoots and selecting the right team.</p>
         </li>
         <li className="flex items-start">
-          <span className="text-purple-600 text-xl  font-bold mr-3">•</span>
+          <span className="text-purple-600 text-xl font-bold mr-3">•</span>
           <p>Limited flexibility for making quick updates or tailoring visuals to new ideas.</p>
         </li>
       </ul>
-          </div>
+    </div>
 
-          {/* Right Section: Visual Comparison */}
-          <div className="grid grid-cols-2 gap-6">
-            {/* Before Image */}
-            <div className="relative group">
-              <span className="absolute top-4 left-4 bg-gray-900 text-white text-sm px-3 py-1 rounded-full shadow-lg">
-                Traditional
-              </span>
-              <img
-                src="https://img.freepik.com/premium-photo/gorgeous-young-woman-wearing-traditional-clothing-created-with-generative-ai_762026-35299.jpg?"
-                alt="Traditional Photoshoot"
-                className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
-                style={{ height: "63vh" }}
-              />
-            </div>
-            {/* After Image */}
-            <div className="relative group">
-              <span className="absolute top-4 left-4 bg-purple-600 text-white text-sm px-3 py-1 rounded-full shadow-lg">
-                AI-Generated
-              </span>
-              <img
-                src="https://i.pinimg.com/originals/84/ec/8e/84ec8eaef3f8a2f47329dd0684374ac3.jpg"
-                className="rounded-lg shadow-lg h-180 group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Right Section: Visual Comparison */}
+    <div className="grid grid-cols-2 gap-6">
+      {/* Before Image */}
+      <div className="relative group">
+        <span className="absolute top-4 left-4 bg-gray-900 text-white text-sm px-3 py-1 rounded-full shadow-lg">
+          Traditional
+        </span>
+        <img
+          src="https://img.freepik.com/premium-photo/gorgeous-young-woman-wearing-traditional-clothing-created-with-generative-ai_762026-35299.jpg?"
+          alt="Traditional Photoshoot"
+          className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300 w-full h-auto lg:h-[63vh] object-cover"
+        />
+      </div>
+      {/* After Image */}
+      <div className="relative group">
+        <span className="absolute top-4 left-4 bg-purple-600 text-white text-sm px-3 py-1 rounded-full shadow-lg">
+          AI-Generated
+        </span>
+        <img
+          src="https://i.pinimg.com/originals/84/ec/8e/84ec8eaef3f8a2f47329dd0684374ac3.jpg"
+          alt="AI-Generated Photoshoot"
+          className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300 w-full h-auto lg:h-[63vh] object-cover"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* section2 */}
       <section
-        ref={ref2}
-        className="relative bg-gradient-to-br from-blue-100 via-teal-50 to-blue-200 py-16 px-6 lg:px-24 overflow-hidden"
-      >
-        {/* Background Gradient Accent */}
-        <div className="absolute -top-20 -left-20 w-96 h-96 bg-teal-400 opacity-30 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-teal-200 opacity-30 rounded-full filter blur-3xl animate-pulse"></div>
+  ref={ref2}
+  className="relative bg-gradient-to-br from-blue-100 via-teal-50 to-blue-200 py-16 px-6 lg:px-24 overflow-hidden"
+>
+  {/* Background Gradient Accent */}
+  <div className="absolute -top-20 -left-20 w-96 h-96 bg-teal-400 opacity-30 rounded-full filter blur-3xl animate-pulse"></div>
+  <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-teal-200 opacity-30 rounded-full filter blur-3xl animate-pulse"></div>
 
-        {/* Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-          {/* Left Section: Images */}
-          <div className="grid grid-cols-2 gap-6">
-            {/* Before Image */}
-            <div className="relative group">
-              <span className="absolute top-4 left-4 bg-gray-900 text-white text-sm px-3 py-1 rounded-full shadow-lg">
-                Traditional
-              </span>
-              <img
-                src="https://img.freepik.com/premium-photo/gorgeous-young-woman-wearing-traditional-clothing-created-with-generative-ai_762026-35299.jpg?w=2000"
-                alt="Traditional Photoshoot"
-                className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
-                style={{ height: "63vh" }}
-              />
-            </div>
-            {/* After Image */}
-            <div className="relative group">
-              <span className="absolute top-4 left-4 bg-purple-600 text-white text-sm px-3 py-1 rounded-full shadow-lg">
-                AI-Generated
-              </span>
-              <img
-                src="https://i.pinimg.com/originals/84/ec/8e/84ec8eaef3f8a2f47329dd0684374ac3.jpg"
-                className="rounded-lg shadow-lg h-180 group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
+  {/* Container */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+    {/* Left Section: Images */}
+    <div className="grid grid-cols-2 gap-6">
+      {/* Before Image */}
+      <div className="relative group">
+        <span className="absolute top-4 left-4 bg-gray-900 text-white text-sm px-3 py-1 rounded-full shadow-lg">
+          Traditional
+        </span>
+        <img
+          src="https://img.freepik.com/premium-photo/gorgeous-young-woman-wearing-traditional-clothing-created-with-generative-ai_762026-35299.jpg?w=2000"
+          alt="Traditional Photoshoot"
+          className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300 object-cover w-full"
+          style={{ height: "50vh" }}
+        />
+      </div>
+      {/* After Image */}
+      <div className="relative group">
+        <span className="absolute top-4 left-4 bg-purple-600 text-white text-sm px-3 py-1 rounded-full shadow-lg">
+          AI-Generated
+        </span>
+        <img
+          src="https://i.pinimg.com/originals/84/ec/8e/84ec8eaef3f8a2f47329dd0684374ac3.jpg"
+          alt="AI-Generated Photoshoot"
+          className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300 object-cover w-full"
+          style={{ height: "50vh" }}
+        />
+      </div>
+    </div>
 
-          {/* Right Section: Content */}
-          <div className="flex flex-col space-y-6 lg:space-y-8 text-center lg:text-left">
-            <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight animate-fade-in">
-              AI Visual Try-On: Your Game-Changing Fashion Solution
-            </h1>
-            {/* <p className="text-lg text-gray-700 animate-fade-in-delay">
-              Instantly create realistic fashion models of any nationality and background.
-              Customize models to fit your brand’s unique aesthetic.
-              Seamlessly apply your garments to AI-generated models for a perfect fit.
-              Deliver high-quality, eCommerce-ready photos in minutes.
-            </p> */}
-            <ul className="space-y-4 text-gray-700">
+    {/* Right Section: Content */}
+    <div className="flex flex-col space-y-6 lg:space-y-8 text-center lg:text-left">
+      <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight animate-fade-in">
+        AI Visual Try-On: Your Game-Changing Fashion Solution
+      </h1>
+      <ul className="space-y-4 text-gray-700">
         <li className="flex items-start">
           <span className="text-purple-700 text-xl font-bold mr-3">•</span>
-          <p> Instantly create realistic fashion models of any 
-          nationality and background.</p>
+          <p> Instantly create realistic fashion models of any nationality and background.</p>
         </li>
         <li className="flex items-start">
           <span className="text-purple-600 text-xl font-bold mr-3">•</span>
-          <p>Seamlessly apply your garments to AI-generated models 
-for a perfect fit.
-</p>
+          <p>Seamlessly apply your garments to AI-generated models for a perfect fit.</p>
         </li>
         <li className="flex items-start">
           <span className="text-purple-600 text-xl font-bold mr-3">•</span>
@@ -291,16 +281,18 @@ for a perfect fit.
         </li>
         <li className="flex items-start">
           <span className="text-purple-600 text-xl font-bold mr-3">•</span>
-          <p>Deliver high-quality, eCommerce-ready photos in 
-          minutes</p>
+          <p>Deliver high-quality, eCommerce-ready photos in minutes.</p>
         </li>
       </ul>
-            <button className="bg-purple-600 text-white w-2/4 py-3 px-8 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-purple-700">
-              Explore Our Technology
-            </button>
-          </div>
-        </div>
-      </section>
+      <div className="flex justify-center lg:justify-start items-center w-full mt-6">
+        <button className="bg-purple-600 text-white w-full sm:w-3/4 md:w-2/4 py-4 px-6 rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-purple-700">
+          Explore Our Technology
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
       {/* section 3 */}
@@ -685,16 +677,16 @@ for a perfect fit.
               Take the next step and elevate your business with AI-powered fashion solutions. Whether you want to explore our platform, book a personalized demo, or get in touch with us, we’re here to help you transform your fashion experience.
             </p>
             <div className="flex flex-col lg:flex-row justify-center lg:justify-start lg:space-x-4 space-y-4 lg:space-y-0 animate-fade-in">
-  <button className="bg-purple-600 text-white py-2 px-4 sm:py-3 sm:px-8 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 hover:bg-purple-700 w-full sm:w-auto">
-    Sign Up Now
-  </button>
-  <button className="bg-teal-600 text-white py-2 px-4 sm:py-3 sm:px-8 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 hover:bg-teal-700 w-full sm:w-auto">
-    Book a Demo
-  </button>
-  <button className="bg-blue-600 text-white py-2 px-4 sm:py-3 sm:px-8 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 hover:bg-blue-700 w-full sm:w-auto">
-    Contact Us
-  </button>
-</div>
+              <button className="bg-purple-600 text-white py-2 px-4 sm:py-3 sm:px-8 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 hover:bg-purple-700 w-full sm:w-auto">
+                Sign Up Now
+              </button>
+              <button className="bg-teal-600 text-white py-2 px-4 sm:py-3 sm:px-8 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 hover:bg-teal-700 w-full sm:w-auto">
+                Book a Demo
+              </button>
+              <button className="bg-blue-600 text-white py-2 px-4 sm:py-3 sm:px-8 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 hover:bg-blue-700 w-full sm:w-auto">
+                Contact Us
+              </button>
+            </div>
 
           </div>
 
@@ -708,71 +700,6 @@ for a perfect fit.
           </div>
         </div>
       </section>
-
-
-
-
-
-      {/* <section ref={ref2} className="relative bg-gradient-to-br from-white to-gray-100 py-16 px-6 lg:px-24 overflow-hidden">
-        {/* Background Gradient Accent */}
-      {/* <div className="absolute -top-16 -left-16 w-96 h-96 bg-purple-500 opacity-20 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-16 -right-16 w-96 h-96 bg-purple-300 opacity-20 rounded-full filter blur-3xl animate-pulse"></div>
-
-        {/* Container */}
-      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-          {/* Section 1: From Casual to Corporate */}
-      {/* <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-snug mb-6 animate-fade-in">
-              From Casual to <br /> Corporate in a Click
-            </h1>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed animate-fade-in-delay">
-              Transform your image with <span className="font-semibold text-purple-600">Outfit Anyone AI</span>. Go from casual to professional effortlessly in seconds—ideal for standout headshots or corporate profiles.
-            </p>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-300 animate-bounce">
-              Try AI4FI Free
-            </button>
-          </div> */}
-      {/* <div className="relative group">
-            <div className="relative">
-              <span className="absolute top-4 left-4 bg-gray-800 text-white text-sm px-3 py-1 rounded-full">
-                After
-              </span>
-              <img
-                src="https://imagedelivery.net/X26-mmRvk4CuiCyo9bU9tw/ae411dab-e2c5-48b0-fd43-5713b28c8000/public"
-                alt="After Transformation"
-                className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300 animate-fade-in"
-              />
-            </div> */}
-      {/* </div> */}
-
-      {/* Section 2: Explore Styles */}
-      {/* <div className="relative group">
-            <div className="relative">
-              <span className="absolute top-4 left-4 bg-gray-800 text-white text-sm px-3 py-1 rounded-full">
-                After
-              </span>
-              <img
-                src="https://imagedelivery.net/X26-mmRvk4CuiCyo9bU9tw/2fcf3864-0636-4e07-cf0e-5fbed8464400/public"
-                alt="Virtual Try-On"
-                className="rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300 animate-fade-in-delay"
-              />
-            </div>
-          </div>
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl lg:text-6xl font-extrabold text-gray-900 leading-snug mb-6 animate-fade-in">
-              Explore Styles with <br /> Virtual Try-On
-            </h1>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed animate-fade-in-delay">
-              Dive into a seamless shopping experience with <span className="font-semibold text-purple-600">Outfit Anyone AI</span>. Try on various outfits virtually and find your perfect match without stepping outside!
-            </p>
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-2xl transition-transform duration-300 animate-bounce">
-              Try AI4FI Free
-            </button>
-          </div> */}
-      {/* </div> */}
-      {/* </section> */}
-
-
       <section className="bg-gray-50 py-16 px-8">
         <div className="max-w-6xl mx-auto">
           <motion.h2

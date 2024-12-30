@@ -5,7 +5,8 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 // import backgroundVideo from "../About/vid.mp4";
 // import imgocr1 from '../Navbar/imgocr1.png';
-import animimg from '../About/anim.jpeg';
+// import animimg from '../About/anim.jpeg';
+import './Home.css';
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -59,64 +60,62 @@ const Hero = () => {
   };
   return (
     <>
-        <div className="w-full">
-
-{/* Upper Section with Background Image and Form */}
-<div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: `url('${animimg}')` }}>
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent opacity-60"></div>
-
-  <div className="relative container mx-auto flex flex-col md:flex-row justify-between items-center h-full px-4 md:px-8">
-    {/* Left Section - Text and Icons */}
-    <div className="text-center px-20 md:text-left space-y-6 text-white max-w-md md:max-w-lg">
-      <h1 className="text-2xl text-[#87CEFA] md:text-4xl text-[#87CEFA] font-bold leading-tight" style={{fontFamily:"nunito-sans,sans-serif",fontSize:"30px"}}>
-        An Internationally Recognized Digital Marketing Agency
-      </h1>
-      <p className="text-lg md:text-xl  font-medium">
-        Driving growth, enhancing visibility and delivering results across the <span className="text-blue-300">Middle East</span>
-      </p>
-      {/* <div className="flex items-center justify-center bg-white rounded-xl md:justify-start space-x-4">
-        <img src="https://mirakidigital.ai/assets/images/facebook.png" alt="Facebook Partner" className="h-10" />
-        <img src="https://mirakidigital.ai/assets/images/hubspot.png" alt="Google Partner" className="h-10" />
-        <img src="https://mirakidigital.ai/assets/images/glogo.png" alt="HubSpot Partner" className="h-10" />
-      </div> */}
-      <a href="tel:+971585868611" className="bg-blue-500 text-white px-4 py-2 rounded-full text-lg inline-block mt-4 md:mt-6 hover:bg-blue-600">
-        +971585868611
-      </a>
-    </div>
-
-    {/* Right Section - Contact Form */}
-     <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 max-w-md w-full mt-10 md:mt-0 mx-12">
-      <h2 className="text-2xl font-semibold text-blue-600 mb-4">Connect with our digital expert</h2>
-      <p className="text-gray-600 mb-6">
-        Please fill out the request form below and our experts will contact you shortly.
-      </p>
-      <form className="space-y-4">
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <input type="text" placeholder="Name *" className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input type="email" placeholder="Email Address *" className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      {/* section1 */}
+      <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gradient-to-br from-purple-500 to-indigo-700 overflow-hidden">
+      {/* Left Content */}
+      <div className="z-10 max-w-4xl text-center md:text-left px-6 md:px-12 lg:px-24">
+        {/* Tagline */}
+        <div className="inline-block bg-white/10 text-sm px-4 py-1 rounded-full mb-6">
+          <span className="font-semibold tracking-wider uppercase">
+            AI Services
+          </span>
         </div>
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <input type="text" placeholder="Phone *" className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          <input type="text" placeholder="Website" className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+        {/* Heading */}
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
+          Powering the Future with{" "}
+          <span className="text-blue-300">AI Innovations</span>
+        </h1>
+
+        {/* Subheading */}
+        <p className="text-lg md:text-xl text-white/80 mb-8">
+          Apricity AI provides cutting-edge solutions, including OCR, predictive
+          analytics, generative AI, and more. Empower your business with safe,
+          ethical, and scalable AI technologies.
+        </p>
+
+        {/* Call-to-Action Button */}
+        <a
+          href="#services"
+          className="inline-block bg-blue-400 hover:bg-blue-300 text-gray-800 font-medium py-3 px-8 rounded-lg transition shadow-md hover:shadow-lg"
+        >
+          Explore Services
+        </a>
+      </div>
+
+      {/* Right Content: Binary Animation */}
+      <div className="relative w-full md:w-1/2 h-64 md:h-full flex items-center justify-center">
+        {/* Binary Background */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden">
+          <div className="animate-fadeIn text-green-200/80 text-xs sm:text-sm md:text-base leading-tight binary-animation">
+            {Array(500)
+              .fill("01101010 110110 00101010 101010")
+              .join(" ")}
+          </div>
         </div>
-        <select className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <option>Select Services</option>
-          {/* Add more options here */}
-         </select>
-        <textarea placeholder="Brief us your requirement" className="border rounded px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3"></textarea>
-        <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-2xl hover:bg-blue-600">
-          SUBMIT
-        </button>
-      </form>
-    </div> 
-  </div>
-</div>
 
-{/* Lower Section with Hand Image */}
+        {/* Silhouette Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black opacity-30"></div>
 
-
-</div>
+        {/* Centerpiece */}
+        <div className="relative z-10">
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-700 rounded-full h-40 w-40 md:h-60 md:w-60"></div>
+        </div>
+      </div>
+    </section>
+    {/* section2 */}
+   
+        {/* Lower Section with Hand Image */}
       <div
         ref={ref}
         className="flex flex-col md:flex-row justify-center items-center md:items-stretch md:justify-between mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"
@@ -174,7 +173,43 @@ const Hero = () => {
           />
         </div>
       </div>
+      <section className="relative bg-gradient-to-b from-gray-900 to-gray-100 text-white py-16">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://aindo.com/assets/pexels-thisisengineering.5adac666_2ctXot.webp" // Replace with your background image URL
+          alt="Background"
+          className="w-full h-full object-cover opacity-70"
+        />
+      </div>
 
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-90"></div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 lg:px-16 text-center">
+        <p className="uppercase text-sm tracking-widest text-white-300 mb-4">
+          Revolutionizing AI-Powered Solutions
+        </p>
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+          Empower Your Business with{' '}<br></br>
+          <span className="text-purple-600">AI-Driven Insights</span>
+        </h1>
+        <p className="text-white-300 text-lg lg:text-xl mb-8">
+          At ApricityTS, we provide cutting-edge AI solutions that are fully
+          scalable, secure, and designed<br/> to transform your business with
+          responsibility and excellence.
+        </p>
+        <div className="flex justify-center items-center gap-4">
+          <a href="/result"><button className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+           Try Now
+          </button></a>
+          <button className="bg-white hover:bg-gray-200 text-purple-600 font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
 
 
       {/* The rest of your component */}
@@ -183,58 +218,58 @@ const Hero = () => {
 
       {/* Cards */}
       <div className="py-16 px-4 md:px-17 lg:px-24">
-  {/* Section Heading */}
-  <div className="mb-12">
-    {/* <h2 className="text-3xl md:text-3xl font-semibold mb-4 text-left">Our Products</h2> */}
-    <h6 className="text-xl md:text-3xl font-semibold mb-4 text-left">
-      Accelerate business processes with our AI-driven solutions tailored<br /> for the UAE and Gulf regions.
-    </h6>
-  </div>
+        {/* Section Heading */}
+        <div className="mb-12">
+          {/* <h2 className="text-3xl md:text-3xl font-semibold mb-4 text-left">Our Products</h2> */}
+          <h6 className="text-xl md:text-3xl font-semibold mb-4 text-left">
+            Accelerate business processes with our AI-driven solutions tailored<br /> for the UAE and Gulf regions.
+          </h6>
+        </div>
 
-  {/* Tab Headings */}
-  <div className="flex items-center space-x-4 text-lg md:text-lg mb-8">
-  {Object.keys(tabData).map((tab) => (
-    <button
-      key={tab}
-      onClick={() => handleTabClick(tab)}
-      className={`pb-2 ${selectedTab === tab ? "text-purple-500 border-b-2 border-purple-500" : ""} text-left`}
-    >
-      {tab}
-    </button>
-  ))}
-</div>
+        {/* Tab Headings */}
+        <div className="flex items-center space-x-4 text-lg md:text-lg mb-8">
+          {Object.keys(tabData).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => handleTabClick(tab)}
+              className={`pb-2 ${selectedTab === tab ? "text-purple-500 border-b-2 border-purple-500" : ""} text-left`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
 
-  {/* Tab Content */}
-  <div className="flex flex-col md:flex-row items-start justify-between md:space-x-12">
-    {/* Text and Button Section */}
-    <div className="max-w-md text-left">
-      <p className="text-lg md:text-xl mb-4">
-        {tabData[selectedTab].description}
-      </p>
-      <a href="/result">
-        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
-          Try Now
-        </button>
-      </a>
-    </div>
+        {/* Tab Content */}
+        <div className="flex flex-col md:flex-row items-start justify-between md:space-x-12">
+          {/* Text and Button Section */}
+          <div className="max-w-md text-left">
+            <p className="text-lg md:text-xl mb-4">
+              {tabData[selectedTab].description}
+            </p>
+            <a href="/result">
+              <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
+                Try Now
+              </button>
+            </a>
+          </div>
 
-    {/* Image Section */}
-    <motion.div
-      className="max-w-md w-full md:w-1/2 mt-8 md:mt-0"
-      style={{ marginRight: "1rem" }} // Adjust this value for exact spacing from the right corner
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <img
-        className="w-full object-cover rounded-lg"
-        style={{ height: "30vh", borderRadius: "30px" }}
-        src={tabData[selectedTab].imageUrl}
-        alt={selectedTab}
-      />
-    </motion.div>
-  </div>
-</div>
+          {/* Image Section */}
+          <motion.div
+            className="max-w-md w-full md:w-1/2 mt-8 md:mt-0"
+            style={{ marginRight: "1rem" }} // Adjust this value for exact spacing from the right corner
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <img
+              className="w-full object-cover rounded-lg"
+              style={{ height: "30vh", borderRadius: "30px" }}
+              src={tabData[selectedTab].imageUrl}
+              alt={selectedTab}
+            />
+          </motion.div>
+        </div>
+      </div>
       <section className="bg-[rgb(13,27,43)] text-white py-12 px-8 md:flex md:justify-between">
         <div className="md:w-1/2 flex flex-col justify-center text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-[sans-serif noto-sans] font-semibold">
