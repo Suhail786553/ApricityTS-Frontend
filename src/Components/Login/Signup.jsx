@@ -14,7 +14,8 @@ const SignUpForm = () => {
     otp: "", // For OTP input
   });
   const [isOtpSent, setIsOtpSent] = useState(false); // To track OTP sent status
-  const [isOtpVerified, setIsOtpVerified] = useState(false); // To track OTP verification status
+  const [isOtpVerified, setIsOtpVerified] = useState(false); // To track OTP verification 
+   const [loading, setLoading] = useState(false);//status
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -26,6 +27,8 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    // setError(""); // Clear previous errors
     const { name, email, password, confirmPassword } = formData;
 
     if (password !== confirmPassword) {
@@ -202,10 +205,15 @@ const SignUpForm = () => {
               {!isOtpSent && (
                 <button
                   type="button"
+                  disabled={loading}
                   onClick={handleSendOtp}
-                  className="w-full p-3 bg-[#904af2] text-white rounded-md mt-4"
+                  className={`w-full p-3 text-white rounded-md mt-4 ${
+                  loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#904af2]"
+                  }`}
+                  style={{ borderRadius: "40px", fontSize: 19 }}
                 >
-                  Send OTP
+                  {loading ? "Send OTP..." : "Send OTP"}
+                  
                 </button>
               )}
 

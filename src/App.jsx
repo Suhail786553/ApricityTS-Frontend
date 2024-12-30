@@ -24,6 +24,7 @@ import DashboardPage from "./Components/Dashboard/Dashboard";
 import APIPage from "./Components/Dashboard/APIPage";
 import SettingsPage from "./Components/Dashboard/SettingsPage";
 import Fashion from './Components/Fashion/Fashion';
+import Modelgen from './Components/Fashion/Modelgen';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -41,6 +42,9 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   // Define routes where Navbar and Footer should not appear
+  const hideFooterRoutes =["/modelgen"];
+  const hideFooter=hideFooterRoutes.includes(location.pathname);
+
   const hideNavbarAndFooterRoutes = ["/dashboard", "/api", "/settings"];
   const hideNavbarAndFooter = hideNavbarAndFooterRoutes.includes(location.pathname);
 
@@ -48,7 +52,7 @@ const Layout = ({ children }) => {
     <>
       {!hideNavbarAndFooter && <Navbar />}
       <main>{children}</main>
-      {!hideNavbarAndFooter && <Footer />}
+      { !hideFooter && !hideNavbarAndFooter && <Footer />}
     </>
   );
 };
@@ -80,6 +84,7 @@ const App = () => {
           <Route path="/api" element={<APIPage />} />
           <Route path="/settings" element={<SettingsPage />} />
           <Route path="/fashion" element={<Fashion />} />
+          <Route path="/modelgen" element={<Modelgen />} />
 
           {/* Use PrivateRoute for protected routes */}
           <Route

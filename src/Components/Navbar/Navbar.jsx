@@ -72,7 +72,7 @@ const Navbar = () => {
                 <a href="/contact" className="text-purple-800 hover:text-black">Contact Us</a>
               </li>
               <li className={`relative group ${currentPath === "/contact" ? "underline-active" : ""}`}>
-                <a href="/fashion" className="text-purple-800 hover:text-black">FashionAI</a>
+                <a href="/fashion" className="text-purple-800 hover:text-black">AI4FI</a>
               </li>
             </ul>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
               <a href="/login" className="px-4 py-2 border border-purple-600 text-purple-600 rounded hover:bg-purple-600 hover:text-white transition">
                 Login
               </a>
-              <a href="/signup" className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
+              <a href="/signup" className="px-4 py-2 bg-purple-600 border border-purple-600 text-white rounded hover:bg-white hover:text-purple-600 transition">
                 Signup
               </a>
             </div>
