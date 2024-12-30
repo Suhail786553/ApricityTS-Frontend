@@ -137,7 +137,7 @@ const Navbar = () => {
             <li><a href="/usecases" className="text-gray-800 hover:text-gray-500">Use cases</a></li>
             <li><a href="/about" className="text-gray-800 hover:text-gray-500">About</a></li>
             <li><a href="/contact" className="text-gray-800 hover:text-gray-500">Contact Us</a></li>
-            <li><a href="/fashion" className="text-gray-800 hover:text-gray-500">FashionAI</a></li>
+            <li><a href="/fashion" className="text-gray-800 hover:text-gray-500">AI4FI</a></li>
             <a href="/login" className="px-4 py-2 border border-purple-600 text-purple-600 rounded hover:bg-purple-600 hover:text-white transition">
                 Login
               </a>
