@@ -63,7 +63,7 @@ const Hero = () => {
       {/* section1 */}
       <section className="relative flex flex-col md:flex-row items-center justify-between min-h-screen bg-gradient-to-br from-purple-500 to-indigo-700 overflow-hidden">
       {/* Left Content */}
-      <div className="z-10 max-w-4xl text-center md:text-left px-6 md:px-12 lg:px-24">
+      <div className="z-10 max-w-4xl text-center md:text-left px-6 py-6 md:px-12 lg:px-24">
         {/* Tagline */}
         <div className="inline-block bg-white/10 text-sm px-4 py-1 rounded-full mb-6">
           <span className="font-semibold tracking-wider uppercase">
