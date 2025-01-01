@@ -50,7 +50,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {!hideNavbarAndFooter && <Navbar />}
+      {!hideFooter && !hideNavbarAndFooter && <Navbar />}
       <main>{children}</main>
       { !hideFooter && !hideNavbarAndFooter && <Footer />}
     </>
