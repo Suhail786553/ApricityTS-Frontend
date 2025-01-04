@@ -193,7 +193,7 @@ const Hero = () => {
         </p>
         <h1 className="text-4xl lg:text-6xl font-bold mb-6">
           Empower Your Business with{' '}<br></br>
-          <span className="text-purple-600">AI-Driven Insights</span>
+          <span className="text-blue-500">AI-Driven Insights</span>
         </h1>
         <p className="text-white-300 text-lg lg:text-xl mb-8">
           At ApricityTS, we provide cutting-edge AI solutions that are fully
@@ -201,7 +201,7 @@ const Hero = () => {
           responsibility and excellence.
         </p>
         <div className="flex justify-center items-center gap-4">
-          <a href="/result"><button className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+          <a href="/result"><button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
            Try Now
           </button></a>
           <button className="bg-white hover:bg-gray-200 text-purple-600 font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
